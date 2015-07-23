@@ -1,5 +1,8 @@
 package com.mnikiforov.advanced_java.collectiontest.copyOnWriteArrayList;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -15,15 +18,17 @@ import java.util.concurrent.Future;
  */
 public class CopyOnWriteArrayListTest {
 
+    private static final Logger log = LoggerFactory.getLogger(CopyOnWriteArrayListTest.class);
+
     public static void main(String[] args) {
-        List<Integer> list1 = Collections.synchronizedList(new ArrayList<Integer>());
-        List<Integer> list2 = new CopyOnWriteArrayList<>();
+        List<Integer> synchronizedList = Collections.synchronizedList(new ArrayList<Integer>());
+        List<Integer> copyOnWriteArrayList = new CopyOnWriteArrayList<>();
 
-        fillList(list1, 100);
-        fillList(list2, 100);
+        fillList(synchronizedList, 100);
+        fillList(copyOnWriteArrayList, 100);
 
-        checkList(list1);
-        checkList(list2);
+        checkList(synchronizedList, "synchronizedList");
+        checkList(copyOnWriteArrayList, "copyOnWriteArrayList");
     }
 
     private static void fillList(List<Integer> list, int count) {
@@ -32,7 +37,7 @@ public class CopyOnWriteArrayListTest {
         }
     }
 
-    private static void checkList(List<Integer> list) {
+    private static void checkList(List<Integer> list, String listName) {
         CountDownLatch latch = new CountDownLatch(1);
 
         ExecutorService ex = Executors.newFixedThreadPool(2);
@@ -40,13 +45,14 @@ public class CopyOnWriteArrayListTest {
         Future<Long> f2 = ex.submit(new ListRunner(50, 100, list, latch));
 
         latch.countDown();
+        ex.shutdown();
         try {
-            System.out.println("Thread 1: " + f1.get());
-            System.out.println("Thread 2: " + f2.get());
+            log.info("{} Thread 1: {}", listName, f1.get());
+            log.info("{} Thread 2: {}", listName, f2.get());
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            log.error(e.getMessage(), e);
         } catch (ExecutionException e) {
-            e.printStackTrace();
+            log.error(e.getMessage(), e);
         }
     }
 }
