@@ -47,8 +47,8 @@ public class CopyOnWriteArrayListTest {
         latch.countDown();
         ex.shutdown();
         try {
-            log.info("{} Thread 1: {}", listName, f1.get());
-            log.info("{} Thread 2: {}", listName, f2.get());
+            log.info("{} Thread 1: {}", listName, f1.get() / 1000);
+            log.info("{} Thread 2: {}", listName, f2.get() / 1000);
         } catch (InterruptedException e) {
             log.error(e.getMessage(), e);
         } catch (ExecutionException e) {

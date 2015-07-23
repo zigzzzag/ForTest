@@ -28,6 +28,10 @@ public class ListRunner implements Callable<Long> {
         long startTime = System.nanoTime();
         for (int i = start; i < end; i++) {
             list.get(i);
+//          copyOnWriteArrayList с редкими вставками оч шустрый, но если вставок много то ваще тормоз!!!
+            if (i % 2 == 0) {
+                list.add(i * 10);
+            }
         }
 
         return System.nanoTime() - startTime;
