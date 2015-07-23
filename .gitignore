@@ -1,0 +1,12 @@
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion
+
+*.iml
+
+## Directory-based project format:
+.idea/
+
+target/
+
+logs/
+
+dependency-reduced-pom.xml
