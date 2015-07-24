@@ -1,6 +1,5 @@
 package com.mnikiforov.stringtest;
 
-import com.mnikiforov.general.GeneralFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,6 +12,6 @@ public class SplitTest {
     public static void main(String[] args) {
         String testString = "";
         String[] arr = testString.split(",");
-        log.info("arr {}", GeneralFactory.convertArrayToString(arr));
+        log.info("arr {}", ArrayAsString.convertArrayToString(arr));
     }
 }

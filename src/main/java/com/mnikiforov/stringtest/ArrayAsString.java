@@ -1,9 +1,9 @@
-package com.mnikiforov.general;
+package com.mnikiforov.stringtest;
 
 /**
  * Created by SBT-Nikiforov-MO on 26.03.2015.
  */
-public class GeneralFactory {
+public class ArrayAsString {
 
     public static String convertArrayToString(Object[] array) {
         StringBuffer stringBuffer = new StringBuffer();
