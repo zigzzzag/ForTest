@@ -1,4 +1,4 @@
-package com.mnikiforov.generics.ArrayVsLists.withoutGeneriсs;
+package com.mnikiforov.genericsArrayVsLists.withoutGeneriсs;
 
 /**
  * Created by SBT-Nikiforov-MO on 23.04.2015.

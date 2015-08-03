@@ -1,4 +1,4 @@
-package com.mnikiforov.generics.ArrayVsLists.withGenerics;
+package com.mnikiforov.genericsArrayVsLists.withGenerics;
 
 import java.util.ArrayList;
 import java.util.List;
