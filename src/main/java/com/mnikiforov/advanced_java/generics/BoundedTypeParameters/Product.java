@@ -3,7 +3,7 @@ package com.mnikiforov.advanced_java.generics.BoundedTypeParameters;
 /**
  * Created by SBT-Nikiforov-MO on 03.08.2015.
  */
-public class Product {
+public abstract class Product<T extends Product<T>> implements Comparable<T> {
 
     private String name;
     private float cost;
@@ -23,4 +23,11 @@ public class Product {
     public void setCost(float cost) {
         this.cost = cost;
     }
+
+    @Override
+    public int compareTo(T o) {
+        return 0;
+    }
+
+    abstract void subCompare(T product);
 }

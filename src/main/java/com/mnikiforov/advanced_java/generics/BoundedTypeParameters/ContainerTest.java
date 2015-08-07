@@ -9,11 +9,19 @@ import java.util.List;
 public class ContainerTest {
 
     public static void main(String[] args) {
+        Camera cameraRecurciseGenerics1 = new Camera();
+        Camera cameraRecurciseGenerics2= new Camera();
+        Phone phoneRecurciseGenerics1 = new Phone();
+        Phone phoneRecurciseGenerics2 = new Phone();
+
+        cameraRecurciseGenerics1.compareTo(cameraRecurciseGenerics2);
+//        cameraRecurciseGenerics1.compareTo(phoneRecurciseGenerics1);//Compile error
+
 //        Container<String> t1;//Compile Error
 
-        Product product1 = new Product();
-        Product product2 = new Product();
-        Product product3 = new Product();
+//        Product product1 = new Product();
+//        Product product2 = new Product();
+//        Product product3 = new Product();
 
         Phone phone1 = new Phone();
         Phone phone2 = new Phone();
@@ -23,13 +31,13 @@ public class ContainerTest {
         Camera camera2 = new Camera();
         Camera camera3 = new Camera();
 
-        List<Product> productList = new ArrayList<>();
+//        List<Product> productList = new ArrayList<>();
         List<Phone> phoneList = new ArrayList<>();
         List<Camera> cameraList = new ArrayList<>();
 
-        productList.add(product1);
-        productList.add(product2);
-        productList.add(product3);
+//        productList.add(product1);
+//        productList.add(product2);
+//        productList.add(product3);
         phoneList.add(phone1);
         phoneList.add(phone2);
         phoneList.add(phone3);
@@ -41,13 +49,13 @@ public class ContainerTest {
         List<Phone> phoneListCopy = new ArrayList<>();
         List<Camera> cameraListCopy = new ArrayList<>();
 
-        copyLists1(productList, productListCopy);
+//        copyLists1(productList, productListCopy);
         copyLists1(phoneList, phoneListCopy);
         copyLists1(cameraList, cameraListCopy);
 //        copyLists1(productList, cameraListCopy);//Compile error
 //        copyLists1(cameraList, productListCopy);//Compile error
 
-        copyLists2(productList, productListCopy);
+//        copyLists2(productList, productListCopy);
 //        copyLists2(phoneList, phoneListCopy);//Compile error
 //        copyLists2(cameraList, cameraListCopy);//Compile error
 //        copyLists1(productList, cameraListCopy);//Compile error
