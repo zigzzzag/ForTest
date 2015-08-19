@@ -1,4 +1,4 @@
-package com.mnikiforov.advanced_java.annotations;
+package com.mnikiforov.advanced_java.annotations_reflection;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

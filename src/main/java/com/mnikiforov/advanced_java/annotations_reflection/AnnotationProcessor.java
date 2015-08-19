@@ -1,4 +1,4 @@
-package com.mnikiforov.advanced_java.annotations;
+package com.mnikiforov.advanced_java.annotations_reflection;
 
 import java.lang.reflect.Method;
 import java.util.HashMap;
@@ -12,8 +12,8 @@ public class AnnotationProcessor {
     public static Map<String, Object> serviceMap = new HashMap<>();
 
     public static void main(String[] args) throws IllegalAccessException, InstantiationException, ClassNotFoundException {
-        loadService("com.mnikiforov.advanced_java.annotations.LazyService");
-        loadService("com.mnikiforov.advanced_java.annotations.SimpleService");
+        loadService("com.mnikiforov.advanced_java.annotations_reflection.LazyService");
+        loadService("com.mnikiforov.advanced_java.annotations_reflection.SimpleService");
         loadService("java.lang.String");
 
         inspectService(SimpleService.class);
