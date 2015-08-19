@@ -1,4 +1,4 @@
-package com.mnikiforov.datesqltest;
+package com.mnikiforov.datetest.datesqltest;
 
 import java.sql.Date;
 
