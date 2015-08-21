@@ -17,6 +17,8 @@ public class MoscowBaghdad {
         TimeZone tz = TimeZone.getDefault();
 //        tz.setID(MOSCOW);
 
+        System.setProperty("-Duser.timezone", "GMT+3");
+
         System.out.println(tz);
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
