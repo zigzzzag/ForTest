@@ -1,4 +1,4 @@
-package com.mnikiforov.advanced_java.serializable;
+package com.mnikiforov.advanced_java.serializable.ser_byte;
 
 import org.apache.commons.lang.builder.ToStringBuilder;
 
@@ -14,12 +14,16 @@ public class DataObject extends NonSerializable implements Serializable {
     int i = 10;
     String s = "testStr";
     String[] def = new String[]{"11", "22", "33"};
-    CustomObject customObject;
+    CustomObject customObject = new CustomObject();
 
     private void writeObject(java.io.ObjectOutputStream stream) throws IOException {
+        stream.defaultWriteObject();//always call
+        stream.writeObject(getMyData());
     }
 
     private void readObject(java.io.ObjectInputStream stream) throws IOException, ClassNotFoundException {
+        stream.defaultReadObject();
+        setMyData((String) stream.readObject());//always call
     }
 
     @Override

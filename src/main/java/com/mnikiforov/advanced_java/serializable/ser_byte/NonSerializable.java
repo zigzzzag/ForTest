@@ -1,4 +1,4 @@
-package com.mnikiforov.advanced_java.serializable;
+package com.mnikiforov.advanced_java.serializable.ser_byte;
 
 /**
  * Created by SBT-Nikiforov-MO on 12.08.2015.
