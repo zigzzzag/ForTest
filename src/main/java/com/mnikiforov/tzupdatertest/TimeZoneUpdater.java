@@ -7,16 +7,21 @@ import java.io.IOException;
  */
 public class TimeZoneUpdater {
 
+    public static final TimeZoneUpdater INSTANCE = new TimeZoneUpdater();
+    private static final String ACTUAL_TZ_DATA_VERSION = "tzdata2014f";
     private final String jreVersion = System.getProperty("java.version");
     private final String javaHome = System.getProperty("java.home");
     private static boolean jsr310;
 
     public static void main(String[] args) throws IOException {
-        TimeZoneUpdater timeZoneUpdater = new TimeZoneUpdater();
-        System.out.println(timeZoneUpdater.getTzDataVersion());
+        if (INSTANCE.isActualCurrentTZData()) {
+            System.out.println("\"" + INSTANCE.getTzDataVersion() + "\" is actual!");
+        } else {
+            System.out.println("\"" + INSTANCE.getTzDataVersion() + "\" is not actual! Actual is \"" + ACTUAL_TZ_DATA_VERSION + "\" or later");
+        }
     }
 
-    public TimeZoneUpdater() {
+    private TimeZoneUpdater() {
         int i = Integer.parseInt(this.jreVersion.substring(2, 3));
         if (i >= 8) {
             jsr310 = true;
@@ -36,5 +41,9 @@ public class TimeZoneUpdater {
             currentID = UtilsHelper.getTzIDFromTZDB(str2);
         }
         return currentID;
+    }
+
+    public boolean isActualCurrentTZData() throws IOException {
+        return INSTANCE.getTzDataVersion().compareTo(ACTUAL_TZ_DATA_VERSION) < 0 ? false : true;
     }
 }
