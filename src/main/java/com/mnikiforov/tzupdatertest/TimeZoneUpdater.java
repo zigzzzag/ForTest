@@ -1,5 +1,7 @@
 package com.mnikiforov.tzupdatertest;
 
+import java.io.IOException;
+
 /**
  * Created by SBT-Nikiforov-MO on 21.08.2015.
  */
@@ -9,7 +11,7 @@ public class TimeZoneUpdater {
     private final String javaHome = System.getProperty("java.home");
     private static boolean jsr310;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         TimeZoneUpdater timeZoneUpdater = new TimeZoneUpdater();
         System.out.println(timeZoneUpdater.getTzDataVersion());
     }
@@ -21,7 +23,8 @@ public class TimeZoneUpdater {
         }
     }
 
-    public String getTzDataVersion() {
+    public String getTzDataVersion() throws IOException {
+        String str2 = UtilsHelper.toTzdbFileName(this.javaHome);
         String currentID;
         if (!jsr310) {
             String zoneInfoDirName = UtilsHelper.toZiDirName(this.javaHome);
@@ -30,8 +33,7 @@ public class TimeZoneUpdater {
             }
             currentID = UtilsHelper.getTzID(zoneInfoDirName);
         } else {
-//            currentID = UtilsHelper.getTzIDFromTZDB(str2);
-            currentID = "fall";
+            currentID = UtilsHelper.getTzIDFromTZDB(str2);
         }
         return currentID;
     }
