@@ -1,4 +1,4 @@
-package com.mnikiforov.timezonetest;
+package com.mnikiforov.datetest.timezonetest;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

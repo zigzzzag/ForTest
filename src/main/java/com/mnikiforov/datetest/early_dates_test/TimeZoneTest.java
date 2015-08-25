@@ -16,17 +16,27 @@ public class TimeZoneTest {
     private static final long HOUR_1 = 1 * 60 * 60 * 1000;
 
     public static void main(String[] args) throws ParseException {
-        TimeZone defaultTimeZone = TimeZone.getDefault();
+        System.out.println("default1:         " + TimeZone.getDefault());
+//        printTestDate();
 
-        System.out.println(defaultTimeZone);
-        printTestDate();
+//        System.setProperty("user.timezone", "America/Adak");
+//        TimeZone.setDefault(null);
 
         TimeZone defaultTimeZone2 = TimeZone.getDefault();
         defaultTimeZone2.setRawOffset(10800000);
+        defaultTimeZone2.setID("America/Adak");
         TimeZone.setDefault(defaultTimeZone2);
+        System.out.println("defaultTimeZone2: " + TimeZone.getDefault());
 
-        System.out.println(defaultTimeZone2);
-        printTestDate();
+        TimeZone.setDefault(TimeZone.getTimeZone("America/Adak"));
+
+        System.out.println("America/Adak:     " + TimeZone.getTimeZone("America/Adak"));
+        System.out.println("default2:         " + TimeZone.getDefault());
+//        printTestDate();
+
+//        for (String tzId : TimeZone.getAvailableIDs()) {
+//            System.out.println(TimeZone.getTimeZone(tzId));
+//        }
     }
 
     private static void printTestDate() throws ParseException {
