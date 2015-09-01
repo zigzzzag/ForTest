@@ -28,9 +28,9 @@ public class TimeZoneTest {
         TimeZone.setDefault(defaultTimeZone2);
         System.out.println("defaultTimeZone2: " + TimeZone.getDefault());
 
-        TimeZone.setDefault(TimeZone.getTimeZone("America/Adak"));
+        TimeZone.setDefault(TimeZone.getTimeZone("GMT+03:00"));
 
-        System.out.println("America/Adak:     " + TimeZone.getTimeZone("America/Adak"));
+        System.out.println("GMT+03:00:        " + TimeZone.getTimeZone("GMT+03:00"));
         System.out.println("default2:         " + TimeZone.getDefault());
 //        printTestDate();
 
