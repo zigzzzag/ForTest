@@ -8,11 +8,23 @@ import java.util.Set;
  * Created by SBT-Nikiforov-MO on 07.09.2015.
  */
 public class HashCodeTest {
-    private int hashCode = 0;
+    private boolean a;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof HashCodeTest)) return false;
+
+        HashCodeTest that = (HashCodeTest) o;
+
+        if (a != that.a) return false;
+
+        return true;
+    }
 
     @Override
     public int hashCode() {
-        return hashCode++;
+        return (a ? 1 : 0);
     }
 
     public static void main(String[] args) {
@@ -20,6 +32,7 @@ public class HashCodeTest {
 
         HashCodeTest hashCodeTest = new HashCodeTest();
         set.add(hashCodeTest);
+        hashCodeTest.a = true;
         System.out.println(set.size());
         for (Iterator<HashCodeTest> iter = set.iterator();
              iter.hasNext(); ) {
