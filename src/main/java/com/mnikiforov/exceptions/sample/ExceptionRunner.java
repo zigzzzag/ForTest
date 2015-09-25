@@ -1,4 +1,4 @@
-package com.mnikiforov.exceptions;
+package com.mnikiforov.exceptions.sample;
 
 /**
  * Created by SBT-Nikiforov-MO on 24.09.2015.
