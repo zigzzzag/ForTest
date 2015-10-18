@@ -1,4 +1,4 @@
-package com.mnikiforov.core;
+package com.mnikiforov.core.linksToObject;
 
 /**
  * Created by Zigzag on 18.10.2015.
