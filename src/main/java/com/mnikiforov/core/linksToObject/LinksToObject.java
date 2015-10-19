@@ -1,26 +1,28 @@
 package com.mnikiforov.core.linksToObject;
 
 /**
- * Created by Zigzag on 18.10.2015.
+ * Created by sbt-nikiforov-mo on 19.10.15.
  */
 public class LinksToObject {
 
+    static class TestClass {
+
+        static final TestClass instance = new TestClass(1);
+
+        static TestClass getInstance() {
+            return instance;
+        }
+
+        int i;
+
+        public TestClass(int i) {
+            this.i = i;
+        }
+    }
+
     public static void main(String[] args) {
-        String strBefore = "strBefore";
-
-        String strAfter = method1(strBefore);
-        System.out.println("strBefore: " + strBefore);
-        System.out.println("strAfter: " + strAfter);
-
-        method2(strBefore);
-        System.out.println("strAfter method2: " + strBefore);
-    }
-
-    private static String method1(String str) {
-        return str += "1";
-    }
-
-    private static void method2(String str) {
-        str += "1";
+        TestClass testClass1 = TestClass.getInstance();
+        TestClass testClass2 = TestClass.getInstance();
+        System.out.println(testClass1 == testClass2);
     }
 }
