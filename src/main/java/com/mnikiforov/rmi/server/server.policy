@@ -1,0 +1,3 @@
+grant codeBase "file:c:/workspace/ForTest/src/" {
+    permission java.security.AllPermission;
+};
