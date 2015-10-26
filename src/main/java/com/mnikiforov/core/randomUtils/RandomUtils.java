@@ -6,6 +6,7 @@
 package com.mnikiforov.core.randomUtils;
 
 import java.util.Random;
+import java.util.concurrent.SynchronousQueue;
 
 /**
  * @author mnikiforov
