@@ -10,6 +10,7 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import org.xbill.DNS.Address;
 import org.xbill.DNS.Lookup;
 import org.xbill.DNS.MXRecord;
@@ -25,31 +26,30 @@ import org.xbill.DNS.Update;
 import org.xbill.DNS.utils.base64;
 
 /**
- *
  * @author mnikiforov
  */
 public class DnsJavaTest {
 
-        public static void main(String[] args) {
-                try {
-                        InetAddress addr = Address.getByName("www.dnsjava.org");
-                        System.out.println(addr.toString());
-                } catch (UnknownHostException ex) {
-                        Logger.getLogger(DnsJavaTest.class.getName()).log(Level.SEVERE, null, ex);
-                }
+    public static void main(String[] args) {
+        try {
+            InetAddress addr = Address.getByName("www.dnsjava.org");
+            System.out.println(addr.toString());
+        } catch (UnknownHostException ex) {
+            Logger.getLogger(DnsJavaTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
-                //Get the MX target and preference of a name:
-                try {
-                        Record[] records = new Lookup("gmail.com", Type.MX).run();
-                        for (int i = 0; i < records.length; i++) {
-                                MXRecord mx = (MXRecord) records[i];
-                                System.out.println("Host " + mx.getTarget() + " has preference " + mx.getPriority());
-                        }
-                } catch (TextParseException ex) {
-                        Logger.getLogger(DnsJavaTest.class.getName()).log(Level.SEVERE, null, ex);
-                }
+        //Get the MX target and preference of a name:
+        try {
+            Record[] records = new Lookup("gmail.com", Type.MX).run();
+            for (int i = 0; i < records.length; i++) {
+                MXRecord mx = (MXRecord) records[i];
+                System.out.println("Host " + mx.getTarget() + " has preference " + mx.getPriority());
+            }
+        } catch (TextParseException ex) {
+            Logger.getLogger(DnsJavaTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
-	//Query a remote name server for its version:
+        //Query a remote name server for its version:
 //	try {
 //	    Lookup l = new Lookup("version.bind.", Type.TXT, DClass.CH);
 //	    l.setResolver(new SimpleResolver(args[0]));
@@ -62,7 +62,7 @@ public class DnsJavaTest {
 //	} catch (UnknownHostException ex) {
 //	    Logger.getLogger(DnsJavaTest.class.getName()).log(Level.SEVERE, null, ex);
 //	}
-                //Transfer a zone from a server and print it:
+        //Transfer a zone from a server and print it:
 //	try {
 //	    ZoneTransferIn xfr = ZoneTransferIn.newAXFR(new Name("."), "192.5.5.241", null);
 //	    List records = xfr.run();
@@ -79,24 +79,24 @@ public class DnsJavaTest {
 //	    Logger.getLogger(DnsJavaTest.class.getName()).log(Level.SEVERE, null, ex);
 //	}
 //	Use DNS dynamic update to set the address of a host to a value specified on the command line:
-                try {
-                        Name zone = Name.fromString("dyn.test.example.");
+        try {
+            Name zone = Name.fromString("dyn.test.example.");
 
-                        Name host = Name.fromString("host", zone);
-                        Update update = new Update(zone);
-                        update.replace(host, Type.A, 3600, "127.0.0.1");
+            Name host = Name.fromString("host", zone);
+            Update update = new Update(zone);
+            update.replace(host, Type.A, 3600, "127.0.0.1");
 
-                        System.out.println(update);
+            System.out.println(update);
 
-                        Resolver res = new SimpleResolver("127.0.0.1");
-                        res.setTSIGKey(new TSIG(host, base64.fromString("8888")));
-                        res.setTCP(true);
+            Resolver res = new SimpleResolver("127.0.0.1");
+            res.setTSIGKey(new TSIG(host, base64.fromString("8888")));
+            res.setTCP(true);
 
-                        Message response = res.send(update);
-                } catch (TextParseException ex) {
-                        Logger.getLogger(DnsJavaTest.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (IOException ex) {
-                        Logger.getLogger(DnsJavaTest.class.getName()).log(Level.SEVERE, null, ex);
-                }
+            Message response = res.send(update);
+        } catch (TextParseException ex) {
+            Logger.getLogger(DnsJavaTest.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(DnsJavaTest.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
 }
