@@ -1,4 +1,4 @@
-package com.mnikiforov.jdbc;
+package com.mnikiforov.jdbc.oracle;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -11,7 +11,7 @@ import java.util.Locale;
 /**
  * Created by Zigzag on 01.11.2015.
  */
-public class ConnectionTest {
+public class ConnectionOracleTest {
 
     private static final String USERNAME = "ZIGZZZAG_TEST_1";
     private static final String PASSWORD = "root";
