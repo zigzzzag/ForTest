@@ -4,9 +4,8 @@
 
 ## Directory-based project format:
 .idea/
-
 target/
-
 logs/
+out/
 
 dependency-reduced-pom.xml

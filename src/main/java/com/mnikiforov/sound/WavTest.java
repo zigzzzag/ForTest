@@ -20,7 +20,7 @@ public class WavTest {
     private static File soundFile;
 
     public static void main(String[] args) {
-	playSound("src/main/resources/Клиент.wav");
+	playSound("src/main/resources/Client.wav");
     }
 
     public static synchronized void playSound(final String filename) {

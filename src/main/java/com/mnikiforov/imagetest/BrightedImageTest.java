@@ -5,36 +5,31 @@
  */
 package com.mnikiforov.imagetest;
 
-import java.awt.Graphics2D;
+import com.mnikiforov.util.Constants;
+
+import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.awt.image.RescaleOp;
 import java.io.File;
 import java.io.IOException;
-import javax.imageio.ImageIO;
 
 /**
- *
  * @author mnikiforov
  */
 public class BrightedImageTest {
 
-        float brightenFactor = 1.2f;
+    float brightenFactor = 1.2f;
 
-        private BufferedImage createBrightImage(BufferedImage image) {
-                RescaleOp op = new RescaleOp(brightenFactor, 0, null);
+    private BufferedImage createBrightImage(BufferedImage image) {
+        RescaleOp op = new RescaleOp(brightenFactor, 0, null);
+        BufferedImage resultImage = op.filter(image, image);
+        return resultImage;
+    }
 
-                BufferedImage resultImage = op.filter(image, image);
-
-                return resultImage;
-        }
-
-        public static void main(String[] args) throws IOException {
-                BrightedImageTest brightedImageTest = new BrightedImageTest();
-
-                BufferedImage sourceImage = ImageIO.read(new File("serviceButtonImage.jpg"));
-
-                BufferedImage resultImage = brightedImageTest.createBrightImage(sourceImage);
-
-                ImageIO.write(resultImage, "png", new File("BrightedImageTest.png"));
-        }
+    public static void main(String[] args) throws IOException {
+        BrightedImageTest brightedImageTest = new BrightedImageTest();
+        BufferedImage sourceImage = ImageIO.read(new File(Constants.DATA_PATH + "serviceButtonImage.jpg"));
+        BufferedImage resultImage = brightedImageTest.createBrightImage(sourceImage);
+        ImageIO.write(resultImage, "png", new File(Constants.OUT_PATH + "BrightedImageTest.png"));
+    }
 }

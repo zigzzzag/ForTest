@@ -1,5 +1,6 @@
 package com.mnikiforov.core.homework.tkach;
 
+import com.mnikiforov.util.Constants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -57,7 +58,7 @@ public class HomeWorkMain {
 
     private Set<Holiday> parseFile() {
         Set<Holiday> result = new TreeSet<>();
-        try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(FILE_NAME), "UTF-8"))) {
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(Constants.DATA_PATH + FILE_NAME), "UTF-8"))) {
             String lineStr = br.readLine();
             while (lineStr != null) {
                 try {

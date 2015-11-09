@@ -5,6 +5,8 @@
  */
 package com.mnikiforov.dithertest;
 
+import com.mnikiforov.util.Constants;
+
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -13,25 +15,24 @@ import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 
 /**
- *
  * @author mnikiforov
  */
 public class DitherTest {
 
     public static void main(String[] args) {
-	try {
-	    BufferedImage sourceImage = ImageIO.read(DitherTest.class.getResourceAsStream("/checkTitlePicture.png"));
-	    BufferedImage checkTitlePictureDither = PrinterFactory.getDitheredImage(sourceImage);
+        try {
+            BufferedImage sourceImage = ImageIO.read(DitherTest.class.getResourceAsStream("/data/checkTitlePicture.png"));
+            BufferedImage checkTitlePictureDither = PrinterFactory.getDitheredImage(sourceImage);
 
-	    File outputFile1 = new File("sourceDitherImage.png");
-	    ImageIO.write(sourceImage, "png", outputFile1);
+            File outputFile1 = new File(Constants.OUT_PATH + "sourceDitherImage.png");
+            ImageIO.write(sourceImage, "png", outputFile1);
 
-	    File outputFile2 = new File("targetDitherImage.png");
-	    ImageIO.write(checkTitlePictureDither, "png", outputFile2);
-	} catch (IOException ex) {
-	    Logger.getLogger(DitherTest.class.getName()).log(Level.SEVERE, null, ex);
-	} catch (Exception ex) {
-	    Logger.getLogger(DitherTest.class.getName()).log(Level.SEVERE, null, ex);
-	}
+            File outputFile2 = new File(Constants.OUT_PATH + "targetDitherImage.png");
+            ImageIO.write(checkTitlePictureDither, "png", outputFile2);
+        } catch (IOException ex) {
+            Logger.getLogger(DitherTest.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception ex) {
+            Logger.getLogger(DitherTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }

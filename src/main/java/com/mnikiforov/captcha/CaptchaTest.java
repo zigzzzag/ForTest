@@ -5,14 +5,11 @@
  */
 package com.mnikiforov.captcha;
 
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.Graphics2D;
+import javax.imageio.ImageIO;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.io.OutputStream;
-import javax.imageio.ImageIO;
 
 /**
  * @author mnikiforov
@@ -21,7 +18,7 @@ public class CaptchaTest {
 
     public static void main(String[] args) throws IOException {
         BufferedImage image = responseCaptcha("714EF");
-        ImageIO.write(image, "PNG", new File("captcha.png"));
+        ImageIO.write(image, "PNG", new File("out/captcha.png"));
     }
 
     private static BufferedImage responseCaptcha(String captcha) throws IOException {

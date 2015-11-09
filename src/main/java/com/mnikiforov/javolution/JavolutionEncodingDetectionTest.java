@@ -1,5 +1,6 @@
 package com.mnikiforov.javolution;
 
+import com.mnikiforov.util.Constants;
 import javolution.xml.stream.XMLStreamConstants;
 import javolution.xml.stream.XMLStreamReaderImpl;
 import junit.framework.TestCase;
@@ -16,7 +17,7 @@ public class JavolutionEncodingDetectionTest extends TestCase {
     private static final String XML =
             "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?><a>b</a>";
 
-    private static File FP = new File("tmp.xml");
+    private static File FP = new File(Constants.DATA_PATH + "tmp.xml");
 
     public void test__FileInputStream() throws Exception {
         OutputStream out = new FileOutputStream(FP);
