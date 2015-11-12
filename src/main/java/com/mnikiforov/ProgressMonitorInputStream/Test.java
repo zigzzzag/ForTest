@@ -5,8 +5,6 @@
  */
 package com.mnikiforov.ProgressMonitorInputStream;
 
-import com.mnikiforov.dithertest.Constants;
-
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
