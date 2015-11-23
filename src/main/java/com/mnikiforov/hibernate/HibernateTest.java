@@ -1,8 +1,11 @@
 package com.mnikiforov.hibernate;
 
+import com.mnikiforov.hibernate.dto.UserDetails;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+
+import java.util.Date;
 
 /**
  * Created by sbt-nikiforov-mo on 12.11.15.
@@ -10,16 +13,21 @@ import org.hibernate.cfg.Configuration;
 public class HibernateTest {
 
     public static void main(String[] args) {
-        UserDetails userDetails = new UserDetails();
-        userDetails.setId(1);
-        userDetails.setFirstname("Gogi");
+        UserDetails user = new UserDetails();
+        user.setId(1);
+        user.setUserName("First User");
+        user.setAddress("First users`s address");
+        user.setJoinedDate(new Date());
+        user.setDescription("description here");
 
         SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
         Session session = sessionFactory.openSession();
         session.beginTransaction();
-        session.save(userDetails);
+        session.save(user);
         session.getTransaction().commit();
 
-
+        session.close();
+        System.out.println("end///");
+        sessionFactory.close();
     }
 }
