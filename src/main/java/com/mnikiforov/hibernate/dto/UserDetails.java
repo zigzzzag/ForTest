@@ -1,9 +1,11 @@
 package com.mnikiforov.hibernate.dto;
 
-import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import java.util.Date;
 
 /**
@@ -22,15 +24,16 @@ public class UserDetails {
     @Id
     private int id;
 
-    @Basic
     private String userName;
 
     private String email;
 
+    @Temporal(value = TemporalType.DATE)
     private Date joinedDate;
 
     private String address;
 
+    @Lob
     private String description;
 
     public UserDetails() {
