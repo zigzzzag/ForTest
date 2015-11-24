@@ -1,4 +1,4 @@
-package com.mnikiforov.hibernate.dto;
+package com.mnikiforov.hibernate.dto.embedding_objects;
 
 import javax.persistence.AttributeOverride;
 import javax.persistence.AttributeOverrides;

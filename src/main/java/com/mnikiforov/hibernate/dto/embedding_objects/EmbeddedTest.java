@@ -1,7 +1,7 @@
-package com.mnikiforov.hibernate;
+package com.mnikiforov.hibernate.dto.embedding_objects;
 
-import com.mnikiforov.hibernate.dto.Address;
-import com.mnikiforov.hibernate.dto.UserEmbeddedAddress;
+import com.mnikiforov.hibernate.dto.embedding_objects.Address;
+import com.mnikiforov.hibernate.dto.embedding_objects.UserEmbeddedAddress;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -11,7 +11,7 @@ import java.util.Date;
 /**
  * Created by sbt-nikiforov-mo on 12.11.15.
  */
-public class HibernateTest {
+public class EmbeddedTest {
 
     public static void main(String[] args) {
         UserEmbeddedAddress user1 = new UserEmbeddedAddress();
