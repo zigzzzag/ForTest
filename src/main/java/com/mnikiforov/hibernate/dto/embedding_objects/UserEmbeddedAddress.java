@@ -25,7 +25,7 @@ import java.util.Date;
  * <version>1.0.0.Final</version>
  */
 @Entity
-@Table(name = "USER_EMBEDDED_ADDRESS")
+@Table(name = "A01_USER_EMBEDDED_ADDRESS")
 public class UserEmbeddedAddress {
 
     @Id
