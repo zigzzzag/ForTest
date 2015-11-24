@@ -19,6 +19,7 @@
         <property name="hbm2ddl.auto">create</property>
 
         <mapping class="com.mnikiforov.hibernate.dto.embedding_objects.UserEmbeddedAddress"/>
+        <mapping class="com.mnikiforov.hibernate.dto.collections.UserWithCollection"/>
     </session-factory>
 
 </hibernate-configuration>

@@ -1,7 +1,5 @@
 package com.mnikiforov.hibernate.dto.embedding_objects;
 
-import com.mnikiforov.hibernate.dto.embedding_objects.Address;
-import com.mnikiforov.hibernate.dto.embedding_objects.UserEmbeddedAddress;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
