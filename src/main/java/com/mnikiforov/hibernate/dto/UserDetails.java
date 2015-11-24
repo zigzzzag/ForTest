@@ -1,6 +1,9 @@
 package com.mnikiforov.hibernate.dto;
 
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.Table;
@@ -19,10 +22,11 @@ import java.util.Date;
  * <version>1.0.0.Final</version>
  */
 @Entity
-@Table(name = "USER_DETAILS2")
+@Table(name = "USER_DETAILS")
 public class UserDetails {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
     private String userName;
@@ -32,7 +36,8 @@ public class UserDetails {
     @Temporal(value = TemporalType.DATE)
     private Date joinedDate;
 
-    private String address;
+    @Embedded
+    private Address address;
 
     @Lob
     private String description;
@@ -42,10 +47,6 @@ public class UserDetails {
 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getUserName() {
@@ -64,14 +65,6 @@ public class UserDetails {
         this.joinedDate = joinedDate;
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
     public String getDescription() {
         return description;
     }
@@ -86,5 +79,13 @@ public class UserDetails {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
     }
 }
