@@ -1,7 +1,7 @@
 package com.mnikiforov.hibernate;
 
 import com.mnikiforov.hibernate.dto.Address;
-import com.mnikiforov.hibernate.dto.UserDetails;
+import com.mnikiforov.hibernate.dto.UserEmbeddedAddress;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -14,17 +14,21 @@ import java.util.Date;
 public class HibernateTest {
 
     public static void main(String[] args) {
-        UserDetails user1 = new UserDetails();
+        UserEmbeddedAddress user1 = new UserEmbeddedAddress();
         user1.setUserName("First User");
-        Address address1 = new Address("streetName1", "cityName1", "stateName1", "pincode1");
-        user1.setAddress(address1);
+        Address homeAddress1 = new Address("home_streetName1", "home_cityName1", "home_stateName1", "home_pincode1");
+        user1.setHomeAddress(homeAddress1);
+        Address officeAddress1 = new Address("office_streetName1", "office_cityName1", "office_stateName1", "office_pincode1");
+        user1.setOfficeAddress(officeAddress1);
         user1.setJoinedDate(new Date());
         user1.setDescription("description here");
 
-        UserDetails user2 = new UserDetails();
+        UserEmbeddedAddress user2 = new UserEmbeddedAddress();
         user2.setUserName("Second User");
-        Address address2 = new Address("streetName2", "cityName2", "stateName2", "pincode2");
-        user2.setAddress(address2);
+        Address homeAddress2 = new Address("home_streetName2", "home_cityName2", "home_stateName2", "home_pincode2");
+        user2.setHomeAddress(homeAddress2);
+        Address officeAddress2 = new Address("office_streetName2", "office_cityName2", "office_stateName2", "office_pincode2");
+        user2.setOfficeAddress(officeAddress2);
         user2.setJoinedDate(new Date());
         user2.setDescription("description here");
 
@@ -38,7 +42,7 @@ public class HibernateTest {
 
             try (Session session = sessionFactory.openSession()) {
                 session.beginTransaction();
-                UserDetails user = session.get(UserDetails.class, 1);
+                UserEmbeddedAddress user = session.get(UserEmbeddedAddress.class, 1);
                 System.out.println("User Name retrieved is " + user.getUserName());
             }
         }

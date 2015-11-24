@@ -1,5 +1,8 @@
 package com.mnikiforov.hibernate.dto;
 
+import javax.persistence.AttributeOverride;
+import javax.persistence.AttributeOverrides;
+import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -22,8 +25,8 @@ import java.util.Date;
  * <version>1.0.0.Final</version>
  */
 @Entity
-@Table(name = "USER_DETAILS")
-public class UserDetails {
+@Table(name = "USER_EMBEDDED_ADDRESS")
+public class UserEmbeddedAddress {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -37,12 +40,21 @@ public class UserDetails {
     private Date joinedDate;
 
     @Embedded
-    private Address address;
+    @AttributeOverrides({
+            @AttributeOverride(name = "street", column = @Column(name = "HOME_STREET_NAME")),
+            @AttributeOverride(name = "city", column = @Column(name = "HOME_CITY_NAME")),
+            @AttributeOverride(name = "state", column = @Column(name = "HOME_STATE_NAME")),
+            @AttributeOverride(name = "pincode", column = @Column(name = "HOME_PIN_CODE")),
+    })
+    private Address homeAddress;
+
+    @Embedded
+    private Address officeAddress;
 
     @Lob
     private String description;
 
-    public UserDetails() {
+    public UserEmbeddedAddress() {
     }
 
     public int getId() {
@@ -81,11 +93,19 @@ public class UserDetails {
         this.email = email;
     }
 
-    public Address getAddress() {
-        return address;
+    public Address getHomeAddress() {
+        return homeAddress;
     }
 
-    public void setAddress(Address address) {
-        this.address = address;
+    public void setHomeAddress(Address homeAddress) {
+        this.homeAddress = homeAddress;
+    }
+
+    public Address getOfficeAddress() {
+        return officeAddress;
+    }
+
+    public void setOfficeAddress(Address officeAddress) {
+        this.officeAddress = officeAddress;
     }
 }
