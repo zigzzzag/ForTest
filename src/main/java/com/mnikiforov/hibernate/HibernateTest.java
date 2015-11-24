@@ -14,7 +14,7 @@ public class HibernateTest {
 
     public static void main(String[] args) {
         UserDetails user = new UserDetails();
-        user.setId(2);
+        user.setId(1);
         user.setUserName("First User");
         user.setAddress("First users`s address");
         user.setJoinedDate(new Date());
@@ -27,10 +27,11 @@ public class HibernateTest {
                 session.getTransaction().commit();
             }
 
-//            try (Session session = sessionFactory.openSession()) {
-//                session.beginTransaction();
-//
-//            }
+            try (Session session = sessionFactory.openSession()) {
+                session.beginTransaction();
+                user = session.get(UserDetails.class, 1);
+                System.out.println("User Name retrieved is " + user.getUserName());
+            }
         }
 
 

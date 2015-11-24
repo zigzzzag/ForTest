@@ -10,12 +10,13 @@ import java.util.Date;
 
 /**
  * Created by sbt-nikiforov-mo on 12.11.15.
+ * <p/>
  *
+ * @Table(name = "USER_DETAILS2")
  * не работало с
  * <groupId>org.hibernate.javax.persistence</groupId>
  * <artifactId>hibernate-jpa-2.1-api</artifactId>
  * <version>1.0.0.Final</version>
- *
  */
 @Entity
 @Table(name = "USER_DETAILS2")
