@@ -1,16 +1,21 @@
 package com.mnikiforov.hibernate.dto.b_collections;
 
 import com.mnikiforov.hibernate.dto.a_embedding_objects.Address;
+import org.hibernate.annotations.CollectionId;
+import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Type;
 
+import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.Table;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.Collection;
 
 /**
  * Created by sbt-nikiforov-mo on 24.11.15.
@@ -26,8 +31,14 @@ public class UserWithCollection {
     private String userName;
 
     @ElementCollection
-    @JoinTable(name = "B02_USER_ADDRESS")
-    private Set<Address> listOfAddresses = new HashSet<>();
+    @JoinTable(name = "B02_USER_ADDRESS",
+            joinColumns = @JoinColumn(name = "USER_ID")
+    )
+    @GenericGenerator(name = "sequence-gen", strategy = "sequence")
+    @CollectionId(columns = {@Column(name = "ADDRESS_ID")},
+            generator = "sequence-gen",
+            type = @Type(type = "long"))
+    private Collection<Address> listOfAddresses = new ArrayList<>();
 
     public UserWithCollection() {
     }
@@ -44,11 +55,11 @@ public class UserWithCollection {
         this.userName = userName;
     }
 
-    public Set<Address> getListOfAddresses() {
+    public Collection<Address> getListOfAddresses() {
         return listOfAddresses;
     }
 
-    public void setListOfAddresses(Set<Address> listOfAddresses) {
+    public void setListOfAddresses(Collection<Address> listOfAddresses) {
         this.listOfAddresses = listOfAddresses;
     }
 }
