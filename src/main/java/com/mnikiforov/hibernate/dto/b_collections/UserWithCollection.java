@@ -2,12 +2,14 @@ package com.mnikiforov.hibernate.dto.b_collections;
 
 import com.mnikiforov.hibernate.dto.a_embedding_objects.Address;
 import org.hibernate.annotations.CollectionId;
+import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -30,7 +32,7 @@ public class UserWithCollection {
 
     private String userName;
 
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     @JoinTable(name = "B02_USER_ADDRESS",
             joinColumns = @JoinColumn(name = "USER_ID")
     )
