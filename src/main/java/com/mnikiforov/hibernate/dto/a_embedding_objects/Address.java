@@ -1,4 +1,4 @@
-package com.mnikiforov.hibernate.dto.embedding_objects;
+package com.mnikiforov.hibernate.dto.a_embedding_objects;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;

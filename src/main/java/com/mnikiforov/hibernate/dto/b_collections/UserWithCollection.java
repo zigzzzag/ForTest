@@ -1,6 +1,6 @@
-package com.mnikiforov.hibernate.dto.collections;
+package com.mnikiforov.hibernate.dto.b_collections;
 
-import com.mnikiforov.hibernate.dto.embedding_objects.Address;
+import com.mnikiforov.hibernate.dto.a_embedding_objects.Address;
 
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;

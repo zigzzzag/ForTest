@@ -1,12 +1,9 @@
-package com.mnikiforov.hibernate.dto.collections;
+package com.mnikiforov.hibernate.dto.b_collections;
 
-import com.mnikiforov.hibernate.dto.embedding_objects.Address;
-import com.mnikiforov.hibernate.dto.embedding_objects.UserEmbeddedAddress;
+import com.mnikiforov.hibernate.dto.a_embedding_objects.Address;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-
-import java.util.Date;
 
 /**
  * Created by sbt-nikiforov-mo on 12.11.15.
