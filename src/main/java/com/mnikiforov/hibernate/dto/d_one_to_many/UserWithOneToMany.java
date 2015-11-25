@@ -1,4 +1,4 @@
-package com.mnikiforov.hibernate.dto.c_one_to_one;
+package com.mnikiforov.hibernate.dto.d_one_to_many;
 
 import com.mnikiforov.hibernate.dto.common.Vehicle;
 
@@ -7,15 +7,19 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashSet;
 
 /**
  * Created by sbt-nikiforov-mo on 24.11.15.
  */
 @Entity
-@Table(name = "C01_USER_WITH_ONE_TO_ONE")
-public class UserWithOneToOne {
+@Table(name = "D01_USER_WITH_ONE_TO_MANY")
+public class UserWithOneToMany {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -23,11 +27,13 @@ public class UserWithOneToOne {
 
     private String userName;
 
-    @OneToOne
-    @JoinColumn(name = "vehicle_id")
-    private Vehicle vehicle;
+    @OneToMany
+    @JoinTable(name = "D_USER_VEHICLE",
+            joinColumns = @JoinColumn(name = "USER_ID"),
+            inverseJoinColumns = @JoinColumn(name = "VEHICLE_ID"))
+    private Collection<Vehicle> vehicle = new ArrayList<>();
 
-    public UserWithOneToOne() {
+    public UserWithOneToMany() {
     }
 
 
@@ -43,11 +49,11 @@ public class UserWithOneToOne {
         this.userName = userName;
     }
 
-    public Vehicle getVehicle() {
+    public Collection<Vehicle> getVehicle() {
         return vehicle;
     }
 
-    public void setVehicle(Vehicle vehicle) {
+    public void setVehicle(Collection<Vehicle> vehicle) {
         this.vehicle = vehicle;
     }
 }
