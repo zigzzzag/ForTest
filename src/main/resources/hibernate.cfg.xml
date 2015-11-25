@@ -16,13 +16,15 @@
 
         <property name="hibernate.show_sql">true</property>
 
-        <property name="hbm2ddl.auto">update</property>
+        <property name="hbm2ddl.auto">create</property>
 
         <mapping class="com.mnikiforov.hibernate.dto.a_embedding_objects.UserEmbeddedAddress"/>
         <mapping class="com.mnikiforov.hibernate.dto.b_collections.UserWithCollection"/>
         <mapping class="com.mnikiforov.hibernate.dto.c_one_to_one.UserWithOneToOne"/>
         <mapping class="com.mnikiforov.hibernate.dto.d_one_to_many.UserWithOneToMany"/>
         <mapping class="com.mnikiforov.hibernate.dto.common.Vehicle"/>
+        <mapping class="com.mnikiforov.hibernate.dto.e_many_to_many.UserWithManyToMany"/>
+        <mapping class="com.mnikiforov.hibernate.dto.e_many_to_many.Girl"/>
     </session-factory>
 
 </hibernate-configuration>
