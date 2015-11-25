@@ -2,7 +2,6 @@ package com.mnikiforov.hibernate.dto.b_collections;
 
 import com.mnikiforov.hibernate.dto.a_embedding_objects.Address;
 import org.hibernate.annotations.CollectionId;
-import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
 

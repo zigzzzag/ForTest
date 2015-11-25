@@ -20,6 +20,8 @@
 
         <mapping class="com.mnikiforov.hibernate.dto.a_embedding_objects.UserEmbeddedAddress"/>
         <mapping class="com.mnikiforov.hibernate.dto.b_collections.UserWithCollection"/>
+        <mapping class="com.mnikiforov.hibernate.dto.c_one_to_one.UserWithOneToOne"/>
+        <mapping class="com.mnikiforov.hibernate.dto.c_one_to_one.Vehicle"/>
     </session-factory>
 
 </hibernate-configuration>
