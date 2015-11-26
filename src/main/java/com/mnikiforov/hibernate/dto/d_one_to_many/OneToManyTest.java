@@ -5,6 +5,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import java.util.ArrayList;
+
 /**
  * Created by sbt-nikiforov-mo on 12.11.15.
  */
@@ -28,9 +30,10 @@ public class OneToManyTest {
         try (SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory()) {
             try (Session session = sessionFactory.openSession()) {
                 session.beginTransaction();
-                session.save(newUser);
-                session.save(vehicle1);
-                session.save(vehicle2);
+                session.persist(newUser);
+//                session.save(newUser);
+//                session.save(vehicle1);
+//                session.save(vehicle2);
                 session.getTransaction().commit();
             }
         }

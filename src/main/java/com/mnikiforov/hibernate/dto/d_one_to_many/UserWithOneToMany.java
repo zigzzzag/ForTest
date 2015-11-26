@@ -2,6 +2,7 @@ package com.mnikiforov.hibernate.dto.d_one_to_many;
 
 import com.mnikiforov.hibernate.dto.common.Vehicle;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -27,7 +28,7 @@ public class UserWithOneToMany {
 
     private String userName;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.PERSIST)
     @JoinTable(name = "D_USER_VEHICLE",
             joinColumns = @JoinColumn(name = "USER_ID"),
             inverseJoinColumns = @JoinColumn(name = "VEHICLE_ID"))
