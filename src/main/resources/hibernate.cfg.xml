@@ -25,6 +25,9 @@
         <mapping class="com.mnikiforov.hibernate.dto.common.Vehicle"/>
         <mapping class="com.mnikiforov.hibernate.dto.e_many_to_many.UserWithManyToMany"/>
         <mapping class="com.mnikiforov.hibernate.dto.e_many_to_many.Girl"/>
+        <mapping class="com.mnikiforov.hibernate.dto.f_inheritance.Animal"/>
+        <mapping class="com.mnikiforov.hibernate.dto.f_inheritance.Cat"/>
+        <mapping class="com.mnikiforov.hibernate.dto.f_inheritance.Dog"/>
     </session-factory>
 
 </hibernate-configuration>
