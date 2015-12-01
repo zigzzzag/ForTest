@@ -19,6 +19,11 @@ public class Product {
     public Product() {
     }
 
+    @Override
+    public String toString() {
+        return "product id:" + id + " serialnumber:" + serialNumber;
+    }
+
     public Product(String serialNumber) {
         this.serialNumber = serialNumber;
     }
