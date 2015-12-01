@@ -1,4 +1,4 @@
-package com.mnikiforov.hibernate.dto.e_many_to_many;
+package com.mnikiforov.hibernate.java_brains.e_many_to_many;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

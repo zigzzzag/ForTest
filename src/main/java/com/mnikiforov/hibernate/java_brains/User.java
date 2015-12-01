@@ -1,4 +1,4 @@
-package com.mnikiforov.hibernate.dto;
+package com.mnikiforov.hibernate.java_brains;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

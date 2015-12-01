@@ -1,4 +1,4 @@
-package com.mnikiforov.hibernate.dto.f_inheritance;
+package com.mnikiforov.hibernate.java_brains.f_inheritance;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

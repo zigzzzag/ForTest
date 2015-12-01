@@ -1,6 +1,6 @@
-package com.mnikiforov.hibernate.dto.b_collections;
+package com.mnikiforov.hibernate.java_brains.b_collections;
 
-import com.mnikiforov.hibernate.dto.a_embedding_objects.Address;
+import com.mnikiforov.hibernate.java_brains.a_embedding_objects.Address;
 import org.hibernate.annotations.CollectionId;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;

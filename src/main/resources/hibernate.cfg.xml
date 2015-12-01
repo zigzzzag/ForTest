@@ -18,17 +18,17 @@
 
         <property name="hbm2ddl.auto">update</property>
 
-        <mapping class="com.mnikiforov.hibernate.dto.a_embedding_objects.UserEmbeddedAddress"/>
-        <mapping class="com.mnikiforov.hibernate.dto.b_collections.UserWithCollection"/>
-        <mapping class="com.mnikiforov.hibernate.dto.c_one_to_one.UserWithOneToOne"/>
-        <mapping class="com.mnikiforov.hibernate.dto.d_one_to_many.UserWithOneToMany"/>
-        <mapping class="com.mnikiforov.hibernate.dto.common.Vehicle"/>
-        <mapping class="com.mnikiforov.hibernate.dto.e_many_to_many.UserWithManyToMany"/>
-        <mapping class="com.mnikiforov.hibernate.dto.e_many_to_many.Girl"/>
-        <mapping class="com.mnikiforov.hibernate.dto.f_inheritance.Animal"/>
-        <mapping class="com.mnikiforov.hibernate.dto.f_inheritance.Cat"/>
-        <mapping class="com.mnikiforov.hibernate.dto.f_inheritance.Dog"/>
-        <mapping class="com.mnikiforov.hibernate.dto.g_crud.Product"/>
+        <mapping class="com.mnikiforov.hibernate.java_brains.a_embedding_objects.UserEmbeddedAddress"/>
+        <mapping class="com.mnikiforov.hibernate.java_brains.b_collections.UserWithCollection"/>
+        <mapping class="com.mnikiforov.hibernate.java_brains.c_one_to_one.UserWithOneToOne"/>
+        <mapping class="com.mnikiforov.hibernate.java_brains.d_one_to_many.UserWithOneToMany"/>
+        <mapping class="com.mnikiforov.hibernate.java_brains.common.Vehicle"/>
+        <mapping class="com.mnikiforov.hibernate.java_brains.e_many_to_many.UserWithManyToMany"/>
+        <mapping class="com.mnikiforov.hibernate.java_brains.e_many_to_many.Girl"/>
+        <mapping class="com.mnikiforov.hibernate.java_brains.f_inheritance.Animal"/>
+        <mapping class="com.mnikiforov.hibernate.java_brains.f_inheritance.Cat"/>
+        <mapping class="com.mnikiforov.hibernate.java_brains.f_inheritance.Dog"/>
+        <mapping class="com.mnikiforov.hibernate.java_brains.g_crud.Product"/>
     </session-factory>
 
 </hibernate-configuration>

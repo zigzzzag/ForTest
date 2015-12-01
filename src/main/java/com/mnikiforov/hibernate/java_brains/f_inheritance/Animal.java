@@ -1,6 +1,5 @@
-package com.mnikiforov.hibernate.dto.f_inheritance;
+package com.mnikiforov.hibernate.java_brains.f_inheritance;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;

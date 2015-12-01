@@ -1,4 +1,4 @@
-package com.mnikiforov.hibernate.dto.e_many_to_many;
+package com.mnikiforov.hibernate.java_brains.e_many_to_many;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

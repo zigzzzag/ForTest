@@ -1,11 +1,9 @@
-package com.mnikiforov.hibernate.dto.d_one_to_many;
+package com.mnikiforov.hibernate.java_brains.d_one_to_many;
 
-import com.mnikiforov.hibernate.dto.common.Vehicle;
+import com.mnikiforov.hibernate.java_brains.common.Vehicle;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-
-import java.util.ArrayList;
 
 /**
  * Created by sbt-nikiforov-mo on 12.11.15.

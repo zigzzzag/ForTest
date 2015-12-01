@@ -1,4 +1,4 @@
-package com.mnikiforov.hibernate.dto.g_crud;
+package com.mnikiforov.hibernate.java_brains.g_crud;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -53,7 +53,7 @@ public class CRUD_Test {
 
                 int id = 5;
                 Product product = getProductById(session, id);
-                product.setSerialNumber("updated_serialnumber");
+                product.setSerialNumber("updated_serialnumber 666");
                 session.update(product);
 
                 session.getTransaction().commit();

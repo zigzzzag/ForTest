@@ -1,6 +1,6 @@
-package com.mnikiforov.hibernate.dto.d_one_to_many;
+package com.mnikiforov.hibernate.java_brains.d_one_to_many;
 
-import com.mnikiforov.hibernate.dto.common.Vehicle;
+import com.mnikiforov.hibernate.java_brains.common.Vehicle;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -13,7 +13,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashSet;
 
 /**
  * Created by sbt-nikiforov-mo on 24.11.15.

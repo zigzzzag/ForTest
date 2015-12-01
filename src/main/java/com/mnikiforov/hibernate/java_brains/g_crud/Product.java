@@ -1,4 +1,4 @@
-package com.mnikiforov.hibernate.dto.g_crud;
+package com.mnikiforov.hibernate.java_brains.g_crud;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

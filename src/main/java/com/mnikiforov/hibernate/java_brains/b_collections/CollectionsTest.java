@@ -1,7 +1,6 @@
-package com.mnikiforov.hibernate.dto.b_collections;
+package com.mnikiforov.hibernate.java_brains.b_collections;
 
-import com.mnikiforov.hibernate.dto.User;
-import com.mnikiforov.hibernate.dto.a_embedding_objects.Address;
+import com.mnikiforov.hibernate.java_brains.a_embedding_objects.Address;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;

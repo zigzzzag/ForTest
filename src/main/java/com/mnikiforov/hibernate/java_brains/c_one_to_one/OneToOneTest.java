@@ -1,6 +1,6 @@
-package com.mnikiforov.hibernate.dto.c_one_to_one;
+package com.mnikiforov.hibernate.java_brains.c_one_to_one;
 
-import com.mnikiforov.hibernate.dto.common.Vehicle;
+import com.mnikiforov.hibernate.java_brains.common.Vehicle;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;

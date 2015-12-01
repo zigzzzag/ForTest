@@ -1,6 +1,6 @@
-package com.mnikiforov.hibernate.dto.common;
+package com.mnikiforov.hibernate.java_brains.common;
 
-import com.mnikiforov.hibernate.dto.d_one_to_many.UserWithOneToMany;
+import com.mnikiforov.hibernate.java_brains.d_one_to_many.UserWithOneToMany;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
