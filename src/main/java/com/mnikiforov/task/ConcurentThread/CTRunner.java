@@ -19,7 +19,7 @@ public class CTRunner {
             EXECUTOR_SERVICE.submit(new Runnable() {
                 @Override
                 public void run() {
-                    for (int j = 0; j < 3; j++) {
+                    for (int j = 0; j < 50; j++) {
                         ExternalProcess.INSTANCE.addRandomItem();
                         try {
                             Thread.sleep(10L);

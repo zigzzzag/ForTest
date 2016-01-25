@@ -6,7 +6,10 @@ import java.util.Queue;
 import java.util.Random;
 
 import static com.mnikiforov.task.ConcurentThread.ExternalData.GROUP_ID_ARRAY;
+
 import java.util.concurrent.atomic.AtomicLong;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * Created by sbt-nikiforov-mo on 25.01.16.
@@ -18,6 +21,7 @@ public enum ExternalProcess {
     private static final AtomicLong ITER_COUNT = new AtomicLong(0);
     Map<Long, AtomicLong> mapIdGenerated = new HashMap<>();
     private Queue<Item> queue;
+    private Lock lock = new ReentrantLock(false);
 
     private ExternalProcess() {
     }
@@ -30,7 +34,15 @@ public enum ExternalProcess {
         AtomicLong itemId = mapIdGenerated.get(groupId);
 
         Item randItem = new Item(itemId.getAndAdd(1), groupId);
-        queue.add(randItem);
+
+        lock.lock();
+        try {
+            queue.add(randItem);
+        } finally {
+            lock.unlock();
+        }
+
+
         System.out.println(ITER_COUNT.addAndGet(1) + ": add random item " + randItem);
     }
 
