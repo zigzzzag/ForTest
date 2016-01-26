@@ -8,10 +8,10 @@ import java.util.concurrent.atomic.AtomicLong;
  */
 public class Consumer implements Runnable {
 
-    public static final long[] GROUP_ID_ARRAY = new long[]{1, 2};
     private Queue<Item> queue;
     private QueueHandler queueHandler;
     public static final AtomicLong COUNT_HANDLED_ITEMS = new AtomicLong(0);
+    public static final AtomicLong LAST_OPERATIONS_TIME = new AtomicLong(0);
 
     public Consumer(Queue<Item> queue, QueueHandler queueHandler) {
         this.queue = queue;
@@ -21,8 +21,14 @@ public class Consumer implements Runnable {
     @Override
     public void run() {
         try {
-            while (queueHandler.handleNextItem()) {
-                COUNT_HANDLED_ITEMS.incrementAndGet();
+            while (true) {
+                queueHandler.handleNextItem();
+                if (COUNT_HANDLED_ITEMS.incrementAndGet() % 100 == 0) {
+                    long deltaTime = System.currentTimeMillis() - LAST_OPERATIONS_TIME.getAndSet(System.currentTimeMillis());
+                    System.err.println("HANDLED: " + COUNT_HANDLED_ITEMS.get() +
+                            ", QUEUE_SIZE: " + queue.size() +
+                            ", time: " + deltaTime);
+                }
             }
         } catch (InterruptedException e) {
             e.printStackTrace();

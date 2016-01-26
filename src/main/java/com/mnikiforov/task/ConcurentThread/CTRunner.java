@@ -12,10 +12,14 @@ import java.util.concurrent.TimeUnit;
  */
 public class CTRunner {
 
-    public static final int QUEUE_SIZE = 32;
+    public static final int QUEUE_SIZE = 1000;
+    public static final int CONSUMER_COUNT = 4;
+    public static final boolean SHOW_TRACE = false;
+
     public static final ExecutorService EXECUTOR_SERVICE_PRODUCER = Executors.newSingleThreadExecutor();
-    public static final ExecutorService EXECUTOR_SERVICE_CONSUMER = Executors.newFixedThreadPool(10);
+    public static final ExecutorService EXECUTOR_SERVICE_CONSUMER = Executors.newFixedThreadPool(CONSUMER_COUNT);
     private BlockingQueue<Item> queue = new ArrayBlockingQueue<>(QUEUE_SIZE, true);//must be thread-safe
+//    private Queue<Item> queue = new LinkedList<>();
 
 
     public static void main(String[] args) throws InterruptedException {
@@ -30,9 +34,10 @@ public class CTRunner {
 
 
         long timeStart = System.currentTimeMillis();
+        Consumer.LAST_OPERATIONS_TIME.addAndGet(timeStart);
 
         QueueHandler queueHandler = new QueueHandler(queue);
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < CONSUMER_COUNT; i++) {
             EXECUTOR_SERVICE_CONSUMER.submit(new Consumer(queue, queueHandler));
         }
 
@@ -42,7 +47,6 @@ public class CTRunner {
         EXECUTOR_SERVICE_CONSUMER.shutdown();
         EXECUTOR_SERVICE_CONSUMER.awaitTermination(Long.MAX_VALUE, TimeUnit.SECONDS);
         System.err.println("EXECUTOR_SERVICE_CONSUMER shutdown");
-
 
 
         System.err.println("total time: " + (System.currentTimeMillis() - timeStart) + "ms");

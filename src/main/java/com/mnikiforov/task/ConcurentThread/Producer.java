@@ -1,6 +1,5 @@
 package com.mnikiforov.task.ConcurentThread;
 
-import static com.mnikiforov.task.ConcurentThread.Consumer.GROUP_ID_ARRAY;
 import java.util.Map;
 import java.util.Queue;
 import java.util.Random;
@@ -13,6 +12,7 @@ import java.util.concurrent.atomic.AtomicLong;
  */
 public class Producer implements Runnable {
 
+    public static final long[] GROUP_ID_ARRAY = new long[]{1, 2, 3, 4, 5, 6, 7, 8};
     private static final AtomicLong ITER_COUNT = new AtomicLong(0);
     Map<Long, AtomicLong> mapIdGenerated = new ConcurrentHashMap<>();
     private BlockingQueue<Item> queue;
@@ -27,9 +27,9 @@ public class Producer implements Runnable {
             for (int i = 0; i < CTRunner.QUEUE_SIZE; i++) {
                 addRandomItem();
             }
-            for (int i = 0; i < 100; i++) {
+            while (true) {
                 addRandomItem();
-                Thread.sleep(50L);
+//                Thread.sleep(10L);
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -47,8 +47,10 @@ public class Producer implements Runnable {
 
         queue.put(randItem);
 
-        System.err.println(ITER_COUNT.addAndGet(1) + ": " + Thread.currentThread().getName()
-                + " add random item" + randItem);
+        if (CTRunner.SHOW_TRACE) {
+            System.err.println(ITER_COUNT.addAndGet(1) + ": " + Thread.currentThread().getName()
+                    + " add random item" + randItem);
+        }
     }
 
     public Queue<Item> getQueue() {

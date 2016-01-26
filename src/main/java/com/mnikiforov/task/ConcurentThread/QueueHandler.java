@@ -19,18 +19,17 @@ public class QueueHandler {
         this.queue = queue;
     }
 
-    public boolean handleNextItem() throws InterruptedException {
-        Item item = queue.poll();
+    public void handleNextItem() throws InterruptedException {
+        Item item = queue.take();
 
-        if (item == null) {
-            System.err.println(Thread.currentThread().getName() + ": queue is empty!!!");
-            return false;
-        }
+//        if (item == null) {
+//            System.err.println(Thread.currentThread().getName() + ": queue is empty!!!");
+//            return;
+//        }
 
         lockByGroupId(item.getGroupId());
         try {
             doSomething(item);
-            return true;
         } finally {
             unlockByGroupId(item.getGroupId());
         }
@@ -39,13 +38,15 @@ public class QueueHandler {
     private void doSomething(Item item) {
         long startTime = System.currentTimeMillis();
         try {
-            Thread.sleep(100L + new Random().nextInt(100));
+            Thread.sleep(10L + new Random().nextInt(10));
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         long finishTime = System.currentTimeMillis();
-        System.err.println(Thread.currentThread().getName() + ": processed item" + item +
-                "[" + parseMillis(startTime) + "," + parseMillis(finishTime) + "]");
+        if (CTRunner.SHOW_TRACE) {
+            System.err.println(Thread.currentThread().getName() + ": processed item" + item +
+                    "[" + parseMillis(startTime) + "," + parseMillis(finishTime) + "]");
+        }
     }
 
     protected String parseMillis(long timeInMillis) {
