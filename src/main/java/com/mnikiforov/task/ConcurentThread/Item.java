@@ -34,6 +34,6 @@ public class Item {
 
     @Override
     public String toString() {
-        return Thread.currentThread().getName() + ", itemId=" + itemId + ", groupId=" + groupId;
+        return "[itemId=" + itemId + ", groupId=" + groupId + "]";
     }
 }
