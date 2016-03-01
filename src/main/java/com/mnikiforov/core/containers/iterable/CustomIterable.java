@@ -34,4 +34,30 @@ public class CustomIterable<T> implements Iterable<T> {
             }
         };
     }
+
+    public Iterable<T> reversed() {
+        return new Iterable<T>() {
+            @Override
+            public Iterator<T> iterator() {
+                return new Iterator<T>() {
+                    private int cursor = elements.length - 1;
+
+                    @Override
+                    public boolean hasNext() {
+                        return cursor >= 0;
+                    }
+
+                    @Override
+                    public T next() {
+                        return elements[cursor--];
+                    }
+
+                    @Override
+                    public void remove() {
+                        throw new UnsupportedOperationException();
+                    }
+                };
+            }
+        };
+    }
 }

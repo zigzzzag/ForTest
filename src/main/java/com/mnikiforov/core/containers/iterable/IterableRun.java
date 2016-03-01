@@ -9,7 +9,13 @@ public class IterableRun {
         CustomIterable<String> ci = new CustomIterable<>("q", "w", "e", "r", "t", "y", "u", "i", "o", "p");
 
         for (String str : ci) {
-            System.out.println(str);
+            System.out.print(str);
+        }
+
+        System.out.println();
+
+        for (String str : ci.reversed()) {
+            System.out.print(str);
         }
     }
 }
