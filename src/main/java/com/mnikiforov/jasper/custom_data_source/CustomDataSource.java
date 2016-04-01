@@ -25,11 +25,15 @@
 package com.mnikiforov.jasper.custom_data_source;
 
 import com.mnikiforov.util.Constants;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import net.sf.jasperreports.engine.DefaultJasperReportsContext;
 import net.sf.jasperreports.engine.JRDataSource;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JRField;
+import net.sf.jasperreports.engine.JRPropertiesUtil;
 import net.sf.jasperreports.engine.JasperCompileManager;
 import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.engine.JasperFillManager;
@@ -42,53 +46,48 @@ import net.sf.jasperreports.engine.JasperReport;
  */
 public class CustomDataSource implements JRDataSource {
 
-
-    /**
-     *
-     */
-    private Object[][] data =
-            {
-                    {"Berne", new Integer(22), "Bill Ott", "250 - 20th Ave."},
-                    {"Berne", new Integer(9), "James Schneider", "277 Seventh Av."},
-                    {"Boston", new Integer(32), "Michael Ott", "339 College Av."},
-                    {"Boston", new Integer(23), "Julia Heiniger", "358 College Av."},
-                    {"Chicago", new Integer(39), "Mary Karsen", "202 College Av."},
-                    {"Chicago", new Integer(35), "George Karsen", "412 College Av."},
-                    {"Chicago", new Integer(11), "Julia White", "412 Upland Pl."},
-                    {"Dallas", new Integer(47), "Janet Fuller", "445 Upland Pl."},
-                    {"Dallas", new Integer(43), "Susanne Smith", "2 Upland Pl."},
-                    {"Dallas", new Integer(40), "Susanne Miller", "440 - 20th Ave."},
-                    {"Dallas", new Integer(36), "John Steel", "276 Upland Pl."},
-                    {"Dallas", new Integer(37), "Michael Clancy", "19 Seventh Av."},
-                    {"Dallas", new Integer(19), "Susanne Heiniger", "86 - 20th Ave."},
-                    {"Dallas", new Integer(10), "Anne Fuller", "135 Upland Pl."},
-                    {"Dallas", new Integer(4), "Sylvia Ringer", "365 College Av."},
-                    {"Dallas", new Integer(0), "Laura Steel", "429 Seventh Av."},
-                    {"Lyon", new Integer(38), "Andrew Heiniger", "347 College Av."},
-                    {"Lyon", new Integer(28), "Susanne White", "74 - 20th Ave."},
-                    {"Lyon", new Integer(17), "Laura Ott", "443 Seventh Av."},
-                    {"Lyon", new Integer(2), "Anne Miller", "20 Upland Pl."},
-                    {"New York", new Integer(46), "Andrew May", "172 Seventh Av."},
-                    {"New York", new Integer(44), "Sylvia Ott", "361 College Av."},
-                    {"New York", new Integer(41), "Bill King", "546 College Av."},
-                    {"Oslo", new Integer(45), "Janet May", "396 Seventh Av."},
-                    {"Oslo", new Integer(42), "Robert Ott", "503 Seventh Av."},
-                    {"Paris", new Integer(25), "Sylvia Steel", "269 College Av."},
-                    {"Paris", new Integer(18), "Sylvia Fuller", "158 - 20th Ave."},
-                    {"Paris", new Integer(5), "Laura Miller", "294 Seventh Av."},
-                    {"San Francisco", new Integer(48), "Robert White", "549 Seventh Av."},
-                    {"San Francisco", new Integer(7), "James Peterson", "231 Upland Pl."}
-            };
-
+    static int COUNT_ROW = 10_000;
+    static int COUNT_PEOPLE_IN_CITY = 10;
+    Object[][] data;
     private int index = -1;
 
-
-    /**
-     *
-     */
     public CustomDataSource() {
+//        long start = System.currentTimeMillis();
+//        System.err.println("init data...");
+        initData();
+//        System.err.println("init time: " + (System.currentTimeMillis() - start));
     }
 
+    private void initData() {
+        List<PeopleData> peopleDatas = new ArrayList<>();
+        for (int i = 0; i < COUNT_ROW; i++) {
+            for (int j = 0; j < COUNT_PEOPLE_IN_CITY; j++) {
+                peopleDatas.add(new PeopleData("CITY_" + i, i, "NAME_" + (i + j), "STREET_" + (i + j)));
+            }
+        }
+        this.data = new Object[peopleDatas.size()][4];
+        for (int i = 0; i < peopleDatas.size(); i++) {
+            PeopleData peopleData = peopleDatas.get(i);
+            data[i][0] = peopleData.city;
+            data[i][1] = peopleData.id; //id
+            data[i][2] = peopleData.name; //name
+            data[i][3] = peopleData.street; //street
+        }
+    }
+
+    private class PeopleData {
+        String city;
+        Integer id;
+        String name;
+        String street;
+
+        public PeopleData(String city, Integer id, String name, String street) {
+            this.city = city;
+            this.id = id;
+            this.name = name;
+            this.street = street;
+        }
+    }
 
     /**
      *
@@ -122,19 +121,31 @@ public class CustomDataSource implements JRDataSource {
     }
 
     public static void main(String[] args) throws JRException {
+
+
+
+        DefaultJasperReportsContext context = DefaultJasperReportsContext.getInstance();
+            JRPropertiesUtil.getInstance(context).setProperty("net.sf.jasperreports.xpath.executer.factory",
+                    "net.sf.jasperreports.engine.util.xml.JaxenXPathExecuterFactory");
+
         System.out.println("Generating PDF...");
         JasperReport jasperReport = JasperCompileManager.compileReport(Constants.RESOURCES_PATH + "jrxml/DataSourceReport.jrxml");
 
-        long start = System.currentTimeMillis();
         //Preparing parameters
         Map<String, Object> parameters = new HashMap<String, Object>();
         parameters.put("ReportTitle", "Address Report");
         parameters.put("DataFile", "CustomDataSource.java");
 
-//        JasperFillManager.fillReportToFile("build/reports/DataSourceReport.jasper", parameters, new CustomDataSource());
-        JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, new CustomDataSource());
-        System.err.println("Filling time : " + (System.currentTimeMillis() - start));
+        for (int i = 0; i < 10; i++) {
+            long start = System.currentTimeMillis();
+            JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, new CustomDataSource());
+            long fillingTime = System.currentTimeMillis() - start;
 
-        JasperExportManager.exportReportToPdfFile(jasperPrint, Constants.OUT_PATH + "DataSourceReport.pdf");
+            start = System.currentTimeMillis();
+            JasperExportManager.exportReportToPdfFile(jasperPrint, Constants.OUT_PATH + "621_DataSourceReport_" + i + ".pdf");
+            long exportTime = System.currentTimeMillis() - start;
+
+            System.err.println("fillingTime: " + fillingTime + ",    exportTime: " + exportTime);
+        }
     }
 }
