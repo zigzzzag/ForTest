@@ -28,51 +28,55 @@ public class ObjectAnalyzer {
         Class clazz = obj.getClass();
         if (clazz == String.class) return (String) obj;
 
+        StringBuilder resultBuilder = new StringBuilder();
         if (clazz.isArray()) {
-            String result = clazz.getComponentType() + "[]{";
+            resultBuilder.append(clazz.getComponentType()).append("[]{");
             for (int i = 0; i < Array.getLength(obj); i++) {
-                if (i > 0) result += ",";
+                if (i > 0) resultBuilder.append(",");
                 Object val = Array.get(obj, i);
                 if (clazz.getComponentType().isPrimitive()) {
-                    result += val;
+                    resultBuilder.append(val);
                 } else {
-                    result += toString(val);
+                    resultBuilder.append(toString(val));
                 }
             }
-            return result + "}";
+            resultBuilder.append("}");
+            return resultBuilder.toString();
         }
 
-        String result = clazz.getName();
+        resultBuilder.append(clazz.getName());
         do {
-            result += "[";
+            resultBuilder.append("[");
             Field[] fields = clazz.getDeclaredFields();
             AccessibleObject.setAccessible(fields, true);
 
-            for (int i = 0; i < fields.length; i++) {
-                Field f = fields[i];
+            int countNonStaticFields = 0;
+            for (Field f : fields) {
                 if (!Modifier.isStatic(f.getModifiers())) {
-                    if (i > 0) {
-                        result += ",";
+                    if (countNonStaticFields > 0) {
+                        resultBuilder.append(",");
                     }
-                    result += f.getName() + "=";
+                    countNonStaticFields++;
+
+                    resultBuilder.append(f.getName()).append("=");
                     try {
                         Class type = f.getType();
                         Object val = f.get(obj);
                         if (type.isPrimitive()) {
-                            result += val;
+                            resultBuilder.append(val);
                         } else {
-                            result += toString(val);
+                            resultBuilder.append(toString(val));
                         }
                     } catch (IllegalAccessException e) {
                         e.printStackTrace();
                     }
                 }
             }
-            result += "]";
+            resultBuilder.append("]");
             clazz = clazz.getSuperclass();
         } while (clazz != null);
 
-        return result;
+        return resultBuilder.toString();
     }
 
     public static void main(String[] args) {
@@ -82,10 +86,9 @@ public class ObjectAnalyzer {
 //        }
 //        System.out.println(ObjectAnalyzer.toString(testArr));
 
-        ArrayList<Integer> squares = new ArrayList<>(5);
+        ArrayList<Integer> squares = new ArrayList<>();
         for (int i = 0; i < 5; i++) squares.add(i * i);
 
-        //TODO find bug
         System.out.println(ObjectAnalyzer.toString(squares));
     }
 }
