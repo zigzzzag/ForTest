@@ -10,10 +10,15 @@ import java.lang.reflect.Modifier;
  */
 public class ClassInfoUtils {
 
+    public static void showFullInfoClass(Class clazz) {
+        showFullInfoClass(clazz.getName());
+    }
+
+
     /**
      * выводит всю информацию о классе
      *
-     * @param className
+     * @param className название класаа
      */
     public static void showFullInfoClass(String className) {
         Class clazz;
