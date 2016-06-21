@@ -24,10 +24,10 @@ public class ProxyTest {
             elements[i] = proxy;
         }
 
-        //сфлрмировать случайное число
+        //сформировать случайное число
         Integer key = new Random().nextInt(elements.length) + 1;
 
-        //выполнить поискпо критею key
+        //выполнить поиск по критею key
         int result = Arrays.binarySearch(elements, key);
 
         //вывести совпавший элемент, если таковой найден
