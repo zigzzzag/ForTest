@@ -3,6 +3,8 @@ package com.mnikiforov.core.swing.action;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
@@ -13,13 +15,44 @@ import java.awt.event.ActionListener;
  */
 public class SimpleActionFrame extends JFrame {
 
-    private JPanel buttonPanel;
+    private final JPanel buttonPanel = new JPanel();
     private static final int DEFAULT_WIDTH = 300;
     private static final int DEFAULT_HEIGHT = 200;
 
     public SimpleActionFrame() {
         setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
 
+        add(buttonPanel);
+
+        initColorButtons();
+
+        initLookAndFeelButtons();
+
+        pack();
+    }
+
+    private void initLookAndFeelButtons() {
+        UIManager.LookAndFeelInfo[] infos = UIManager.getInstalledLookAndFeels();
+        for (final UIManager.LookAndFeelInfo info : infos) {
+            JButton button = new JButton(info.getName());
+            buttonPanel.add(button);
+
+            button.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    try {
+                        UIManager.setLookAndFeel(info.getClassName());
+                        SwingUtilities.updateComponentTreeUI(SimpleActionFrame.this);
+                        pack();
+                    } catch (Exception ex) {
+                        ex.printStackTrace();
+                    }
+                }
+            });
+        }
+    }
+
+    private void initColorButtons() {
         JButton yellowButton = new JButton("Yellow");
         JButton blueButton = new JButton("Blue");
         JButton redButton = new JButton("Red");
@@ -28,15 +61,9 @@ public class SimpleActionFrame extends JFrame {
         blueButton.addActionListener(new ColorAction(Color.BLUE));
         redButton.addActionListener(new ColorAction(Color.RED));
 
-        buttonPanel = new JPanel();
-
         buttonPanel.add(yellowButton);
         buttonPanel.add(blueButton);
         buttonPanel.add(redButton);
-
-        add(buttonPanel);
-
-
     }
 
     private class ColorAction implements ActionListener {
