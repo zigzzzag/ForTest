@@ -9,6 +9,8 @@ public class InstanceOfTest {
         String str = "String test";
         String strNull = null;
 
+        System.out.println("null instanceof Object = " + (null instanceof Object));
+
         if (str instanceof String) {
             System.out.println(str + " - it's ok!");
         }
