@@ -1,4 +1,4 @@
-package com.mnikiforov.exceptions;
+package com.mnikiforov.core.exceptions;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
