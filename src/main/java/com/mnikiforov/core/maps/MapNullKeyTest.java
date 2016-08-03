@@ -12,6 +12,9 @@ public class MapNullKeyTest {
         Map<String, String> testMap = new HashMap<>();
 
         testMap.put(null, null);
+        testMap.put(null, "a");
+        testMap.put("a", null);
+
 
         for (Map.Entry<String, String> entry : testMap.entrySet()) {
             System.out.println(entry.getKey() + " : " + entry.getValue());
