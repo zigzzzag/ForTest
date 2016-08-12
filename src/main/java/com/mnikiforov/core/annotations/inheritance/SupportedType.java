@@ -1,4 +1,4 @@
-package com.mnikiforov.annotations.inheritance;
+package com.mnikiforov.core.annotations.inheritance;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

@@ -1,4 +1,4 @@
-package com.mnikiforov.annotations.inheritance;
+package com.mnikiforov.core.annotations.inheritance;
 
 /**
  * Created by sbt-nikiforov-mo on 11.08.16.
