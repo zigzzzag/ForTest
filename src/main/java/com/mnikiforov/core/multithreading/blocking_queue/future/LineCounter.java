@@ -9,20 +9,19 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 import java.util.concurrent.FutureTask;
+import org.apache.commons.lang.StringUtils;
 
 /**
  * Подсчитывает файлы, содержащие заданное ключевое слово, в каталоге и его подкаталогах
  * <p>
  * Created by sbt-nikiforov-mo on 18.08.16.
  */
-public class MatchCounter implements Callable<Integer> {
+public class LineCounter implements Callable<Integer> {
     private File directory;
-    private String keyword;
     private int count;
 
-    public MatchCounter(File directory, String keyword) {
+    public LineCounter(File directory) {
         this.directory = directory;
-        this.keyword = keyword;
     }
 
     @Override
@@ -34,13 +33,13 @@ public class MatchCounter implements Callable<Integer> {
 
         for (File file : files) {
             if (file.isDirectory()) {
-                MatchCounter counter = new MatchCounter(file, keyword);
+                LineCounter counter = new LineCounter(file);
                 FutureTask<Integer> task = new FutureTask<>(counter);
                 results.add(task);
                 Thread t = new Thread(task);
                 t.start();
             } else {
-                if (search(file)) count++;
+                count += getNotEmptyLineCount(file);
             }
         }
 
@@ -58,25 +57,25 @@ public class MatchCounter implements Callable<Integer> {
     }
 
     /**
-     * Осуществляет поиск ключевого слова
+     * Считает количество непустых строк в файле
      *
-     * @param file Файл для поиска ключевого слова
-     * @return true, если ключевое слово содержится в файле
+     * @param file Файл для подсчета строк
+     * @return Количество непустых строк в файле
      */
-    private boolean search(File file) {
+    private int getNotEmptyLineCount(File file) {
+        int countLine = 0;
         try {
             try (Scanner in = new Scanner(file)) {
-                boolean found = false;
-                while (!found && in.hasNextLine()) {
+                while (in.hasNextLine()) {
                     String line = in.nextLine();
-                    if (line.contains(keyword)) found = true;
+                    if (StringUtils.isNotBlank(line)) {
+                        countLine++;
+                    }
                 }
-                return found;
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-
-        return false;
+        return countLine;
     }
 }

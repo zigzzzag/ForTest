@@ -8,25 +8,27 @@ import java.util.concurrent.FutureTask;
 /**
  * Created by sbt-nikiforov-mo on 18.08.16.
  */
-public class FutureTest {
+public class NotEmptyLineTest {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter base directory (e.g. /usr/local/jdk5.0/src): ");
         String directory = in.nextLine();
-        System.out.println("Enter keyword (e.g. volatile): ");
-        String keyword = in.nextLine();
 
         long start = System.currentTimeMillis();
-        Integer countResult = null;
+        Integer countResult;
 
-        MatchCounter counter = new MatchCounter(new File(directory), keyword);
+        LineCounter counter = new LineCounter(new File(directory));
         FutureTask<Integer> task = new FutureTask<>(counter);
         Thread t = new Thread(task);
         t.start();
+
+        ThreadDiagnose diagnose = new ThreadDiagnose(task);
+        new Thread(diagnose).start();
+
         try {
             countResult = task.get();
-            System.out.println(countResult + " matching files.");
+            System.out.println(countResult + " not empty lines.");
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
@@ -34,5 +36,27 @@ public class FutureTest {
         }
 
         System.out.println("total time: " + (System.currentTimeMillis() - start) + "ms");
+    }
+
+    private static class ThreadDiagnose implements Runnable {
+
+        private FutureTask<?> task;
+
+        public ThreadDiagnose(FutureTask<?> task) {
+            this.task = task;
+        }
+
+        @Override
+        public void run() {
+            while (!task.isDone()) {
+                System.out.println("All thread count: " + Thread.getAllStackTraces().size());
+
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 }
