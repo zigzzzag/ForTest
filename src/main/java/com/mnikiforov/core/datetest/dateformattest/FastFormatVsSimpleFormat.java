@@ -82,8 +82,11 @@ public class FastFormatVsSimpleFormat {
             Date date = new Date(i * HOUR);
             TEST_DATES.add(date);
             //интересно, что время меняется если использовать разные форматеры для инициализации :)
-//            TEST_DATES_STR.add(new SimpleDateFormat(FORMAT).format(date));
-            TEST_DATES_STR.add(FastDateFormat.getInstance(FORMAT).format(date));
+            if (i % 2 == 0) {
+                TEST_DATES_STR.add(new SimpleDateFormat(FORMAT).format(date));
+            } else {
+                TEST_DATES_STR.add(FastDateFormat.getInstance(FORMAT).format(date));
+            }
         }
 
         return TEST_DATES;
