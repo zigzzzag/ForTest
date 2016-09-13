@@ -12,8 +12,9 @@ public class BooleanNullTest {
 
     private static void testCastNull() {
         Object o = null;
-        Boolean b = (Boolean) o;
-        System.out.println(b);
+        Boolean b = (Boolean) o;// b is null
+        boolean boo = b;// NPE
+        System.out.println(boo);
     }
 
     private static void testIfNull() {
