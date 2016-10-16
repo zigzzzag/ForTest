@@ -1,4 +1,4 @@
-package com.mnikiforov.testing_sber.t2016.collections;
+package com.mnikiforov.testing_sber.t2016.c2_collections;
 
 import java.util.ArrayList;
 import java.util.Arrays;
