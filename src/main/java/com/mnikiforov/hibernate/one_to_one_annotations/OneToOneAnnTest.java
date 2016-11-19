@@ -1,5 +1,6 @@
 package com.mnikiforov.hibernate.one_to_one_annotations;
 
+import com.mnikiforov.hibernate.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -12,7 +13,7 @@ import java.util.List;
 public class OneToOneAnnTest {
 
     public static void main(String[] args) {
-        try (SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory()) {
+        try (SessionFactory sessionFactory = HibernateUtil.getSessionFactory()) {
             try (Session session = sessionFactory.openSession()) {
                 session.beginTransaction();
 
