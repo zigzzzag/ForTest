@@ -1,4 +1,4 @@
-package com.mnikiforov.hibernate.onetoone;
+package com.mnikiforov.hibernate.one_to_one_annotations;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

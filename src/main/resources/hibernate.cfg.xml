@@ -29,8 +29,10 @@
         <mapping class="com.mnikiforov.hibernate.java_brains.f_inheritance.Cat"/>
         <mapping class="com.mnikiforov.hibernate.java_brains.f_inheritance.Dog"/>
         <mapping class="com.mnikiforov.hibernate.java_brains.g_crud.Product"/>
-        <mapping class="com.mnikiforov.hibernate.onetoone.Passport"/>
-        <mapping class="com.mnikiforov.hibernate.onetoone.User"/>
+        <mapping class="com.mnikiforov.hibernate.one_to_one_annotations.Passport"/>
+        <mapping class="com.mnikiforov.hibernate.one_to_one_annotations.User"/>
+        <mapping resource="hibernate/one_to_one/Stock.hbm.xml"/>
+        <mapping resource="hibernate/one_to_one/StockDetail.hbm.xml"/>
     </session-factory>
 
 </hibernate-configuration>
