@@ -8,17 +8,21 @@
             <column name="ID"/>
             <generator class="native"/>
         </id>
-        <many-to-one name="stock" class="com.mnikiforov.hibernate.one_to_one_xml.Stock"
-                    column="stock_id" unique="true" cascade="all"></many-to-one>
+
+        <one-to-one name="stock" class="com.mnikiforov.hibernate.one_to_one_xml.Stock" property-ref="stockDetail"/>
+
         <property name="compName" type="string">
             <column name="COMP_NAME" length="100" not-null="true"/>
         </property>
+
         <property name="compDesc" type="string">
             <column name="COMP_DESC" not-null="true"/>
         </property>
+
         <property name="remark" type="string">
             <column name="REMARK" not-null="true"/>
         </property>
+
         <property name="listedDate" type="date">
             <column name="LISTED_DATE" length="10" not-null="true"/>
         </property>

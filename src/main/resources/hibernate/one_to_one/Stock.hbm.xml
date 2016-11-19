@@ -7,13 +7,16 @@
         <id name="id" type="java.lang.Integer">
             <generator class="native"/>
         </id>
+
         <property name="stockCode" type="string">
             <column name="STOCK_CODE" length="10" not-null="true"/>
         </property>
+
         <property name="stockName" type="string">
             <column name="STOCK_NAME" length="20" not-null="true"/>
         </property>
-        <one-to-one name="stockDetail" class="com.mnikiforov.hibernate.one_to_one_xml.StockDetail"
-                    property-ref="stock" cascade="all"></one-to-one>
+
+        <many-to-one name="stockDetail" class="com.mnikiforov.hibernate.one_to_one_xml.StockDetail"
+                     column="stockdetail_id" unique="true" cascade="all"/>
     </class>
 </hibernate-mapping>
