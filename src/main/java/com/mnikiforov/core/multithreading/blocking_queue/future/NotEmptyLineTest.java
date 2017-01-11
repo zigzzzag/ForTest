@@ -6,7 +6,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
 /**
- * Created by sbt-nikiforov-mo on 18.08.16.
+ * Created by zigzzzag on 18.08.16.
  */
 public class NotEmptyLineTest {
 

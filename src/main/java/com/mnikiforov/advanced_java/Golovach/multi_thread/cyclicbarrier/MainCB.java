@@ -3,7 +3,7 @@ package com.mnikiforov.advanced_java.Golovach.multi_thread.cyclicbarrier;
 import java.util.concurrent.CyclicBarrier;
 
 /**
- * Created by SBT-Nikiforov-MO on 01.07.2015.
+ * Created by zigzzzag on 01.07.2015.
  */
 public class MainCB {
 

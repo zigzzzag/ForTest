@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Created by sbt-nikiforov-mo on 29.10.15.
+ * Created by zigzzzag on 29.10.15.
  */
 public class BinarySearch {
 

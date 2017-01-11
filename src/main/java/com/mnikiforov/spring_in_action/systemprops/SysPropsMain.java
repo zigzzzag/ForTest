@@ -6,7 +6,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * Created by SBT-Nikiforov-MO on 01.09.2015.
+ * Created by zigzzzag on 01.09.2015.
  */
 public class SysPropsMain {
 

@@ -8,7 +8,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 /**
- * Created by SBT-Nikiforov-MO on 12.08.2015.
+ * Created by zigzzzag on 12.08.2015.
  */
 public class SerializableRun {
 

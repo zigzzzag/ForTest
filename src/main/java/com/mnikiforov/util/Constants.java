@@ -1,7 +1,7 @@
 package com.mnikiforov.util;
 
 /**
- * Created by sbt-nikiforov-mo on 09.11.15.
+ * Created by zigzzzag on 09.11.15.
  */
 public final class Constants {
 

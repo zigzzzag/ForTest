@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 /**
- * Created by sbt-nikiforov-mo on 16.11.15.
+ * Created by zigzzzag on 16.11.15.
  */
 public class TempFileTest {
 

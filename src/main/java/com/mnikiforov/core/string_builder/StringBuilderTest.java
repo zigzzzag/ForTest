@@ -1,7 +1,7 @@
 package com.mnikiforov.core.string_builder;
 
 /**
- * Created by sbt-nikiforov-mo on 06.10.15.
+ * Created by zigzzzag on 06.10.15.
  */
 public class StringBuilderTest {
 

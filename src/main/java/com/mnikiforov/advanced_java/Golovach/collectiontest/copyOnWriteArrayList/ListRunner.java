@@ -5,7 +5,7 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.CountDownLatch;
 
 /**
- * Created by SBT-Nikiforov-MO on 22.06.2015.
+ * Created by zigzzzag on 22.06.2015.
  */
 public class ListRunner implements Callable<Long> {
 

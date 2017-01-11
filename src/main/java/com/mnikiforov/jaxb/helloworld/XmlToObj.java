@@ -6,7 +6,7 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
 /**
- * Created by sbt-nikiforov-mo on 11.03.16.
+ * Created by zigzzzag on 11.03.16.
  */
 public class XmlToObj {
 

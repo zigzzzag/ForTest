@@ -1,7 +1,7 @@
 package com.mnikiforov.hibernate.one_to_one_xml;
 
 /**
- * Created by sbt-nikiforov-mo on 11/16/16.
+ * Created by zigzzzag on 11/16/16.
  */
 public class Stock {
 

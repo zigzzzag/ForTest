@@ -1,7 +1,7 @@
 package com.mnikiforov.core.double_pack.error;
 
 /**
- * Created by sbt-nikiforov-mo on 19.08.16.
+ * Created by zigzzzag on 19.08.16.
  */
 public class DoubleErrorTest {
 

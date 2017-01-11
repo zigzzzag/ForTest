@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Created by sbt-nikiforov-mo on 11.05.16.
+ * Created by zigzzzag on 11.05.16.
  */
 public class ListLinkTest {
 

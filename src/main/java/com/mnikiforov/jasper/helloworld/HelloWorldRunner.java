@@ -15,7 +15,7 @@ import net.sf.jasperreports.engine.util.xml.JRXPathExecuterFactory;
 import net.sf.jasperreports.engine.util.xml.JRXPathExecuterUtils;
 
 /**
- * Created by sbt-nikiforov-mo on 30.03.16.
+ * Created by zigzzzag on 30.03.16.
  */
 public class HelloWorldRunner {
 

@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 /**
- * Created by sbt-nikiforov-mo on 24.11.15.
+ * Created by zigzzzag on 24.11.15.
  */
 @Entity
 @Table(name = "E01_USER_WITH_MANY_TO_MANY")

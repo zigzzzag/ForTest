@@ -1,7 +1,7 @@
 package com.mnikiforov.trash.sber;
 
 /**
- * Created by sbt-nikiforov-mo on 29.10.15.
+ * Created by zigzzzag on 29.10.15.
  */
 public class Concurency2 {
 

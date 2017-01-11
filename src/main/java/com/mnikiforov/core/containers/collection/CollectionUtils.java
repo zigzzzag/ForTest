@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.ListIterator;
 
 /**
- * Created by sbt-nikiforov-mo on 29.02.16.
+ * Created by zigzzzag on 29.02.16.
  */
 public class CollectionUtils {
 

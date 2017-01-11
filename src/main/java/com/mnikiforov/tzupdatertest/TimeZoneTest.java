@@ -5,7 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.TimeZone;
 
 /**
- * Created by sbt-nikiforov-mo on 02.11.15.
+ * Created by zigzzzag on 02.11.15.
  */
 public class TimeZoneTest {
 

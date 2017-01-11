@@ -3,7 +3,7 @@ package com.mnikiforov.core.genericsArrayVsLists.withGenerics;
 import java.util.List;
 
 /**
- * Created by SBT-Nikiforov-MO on 23.04.2015.
+ * Created by zigzzzag on 23.04.2015.
  */
 public class Test1 {
 

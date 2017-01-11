@@ -11,7 +11,7 @@ import java.awt.geom.Line2D;
 import java.awt.geom.Rectangle2D;
 
 /**
- * Created by sbt-nikiforov-mo on 21.06.16.
+ * Created by zigzzzag on 21.06.16.
  */
 public class DrawTest {
 

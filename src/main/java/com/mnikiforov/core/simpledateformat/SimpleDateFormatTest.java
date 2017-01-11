@@ -3,7 +3,7 @@ package com.mnikiforov.core.simpledateformat;
 import java.text.SimpleDateFormat;
 
 /**
- * Created by SBT-Nikiforov-MO on 27.03.2015.
+ * Created by zigzzzag on 27.03.2015.
  */
 public class SimpleDateFormatTest {
 

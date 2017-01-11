@@ -3,7 +3,7 @@ package com.mnikiforov.spring_in_action.systemprops;
 import java.util.Map;
 
 /**
- * Created by SBT-Nikiforov-MO on 01.09.2015.
+ * Created by zigzzzag on 01.09.2015.
  */
 public class SystemPropsSpring {
 

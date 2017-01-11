@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 /**
- * Created by sbt-nikiforov-mo on 18.11.15.
+ * Created by zigzzzag on 18.11.15.
  */
 public class DeleteTempFileTest {
 

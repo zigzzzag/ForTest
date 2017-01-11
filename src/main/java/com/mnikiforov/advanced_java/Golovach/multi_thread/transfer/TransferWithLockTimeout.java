@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by SBT-Nikiforov-MO on 29.06.2015.
+ * Created by zigzzzag on 29.06.2015.
  */
 public class TransferWithLockTimeout implements Transfer {
 

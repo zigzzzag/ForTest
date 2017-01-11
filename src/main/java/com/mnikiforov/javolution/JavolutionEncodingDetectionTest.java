@@ -11,7 +11,7 @@ import java.io.FileOutputStream;
 import java.io.OutputStream;
 
 /**
- * Created by SBT-Nikiforov-MO on 20.07.2015.
+ * Created by zigzzzag on 20.07.2015.
  */
 public class JavolutionEncodingDetectionTest extends TestCase {
     private static final String XML =

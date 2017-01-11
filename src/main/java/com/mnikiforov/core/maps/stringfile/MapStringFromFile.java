@@ -13,7 +13,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * Created by sbt-nikiforov-mo on 13.11.15.
+ * Created by zigzzzag on 13.11.15.
  */
 public class MapStringFromFile {
 

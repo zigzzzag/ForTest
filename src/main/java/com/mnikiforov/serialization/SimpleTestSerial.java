@@ -9,7 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Created by sbt-nikiforov-mo on 10/3/16.
+ * Created by zigzzzag on 10/3/16.
  */
 public class SimpleTestSerial extends Parent {
 

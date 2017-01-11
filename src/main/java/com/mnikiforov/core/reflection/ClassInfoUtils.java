@@ -6,7 +6,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 
 /**
- * Created by sbt-nikiforov-mo on 14.06.16.
+ * Created by zigzzzag on 14.06.16.
  */
 public class ClassInfoUtils {
 

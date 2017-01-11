@@ -1,7 +1,7 @@
 package com.mnikiforov.core.constructor;
 
 /**
- * Created by sbt-nikiforov-mo on 14.06.16.
+ * Created by zigzzzag on 14.06.16.
  */
 public class ConstructorTest {
 

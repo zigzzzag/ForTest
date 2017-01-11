@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Created by SBT-Nikiforov-MO on 02.06.2015.
+ * Created by zigzzzag on 02.06.2015.
  */
 public class AddNullTest {
 

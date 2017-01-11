@@ -13,7 +13,7 @@ import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
 /**
- * Created by sbt-nikiforov-mo on 12/1/16.
+ * Created by zigzzzag on 12/1/16.
  */
 @Entity(name = "ORG")
 public class Org {

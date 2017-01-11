@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.WeakHashMap;
 
 /**
- * Created by SBT-Nikiforov-MO on 18.06.2015.
+ * Created by zigzzzag on 18.06.2015.
  */
 public class WeakHashMapTest {
 

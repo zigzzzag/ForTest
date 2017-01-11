@@ -1,7 +1,7 @@
 package com.mnikiforov.task.ConcurentThread;
 
 /**
- * Created by sbt-nikiforov-mo on 25.01.16.
+ * Created by zigzzzag on 25.01.16.
  */
 public class Item {
 

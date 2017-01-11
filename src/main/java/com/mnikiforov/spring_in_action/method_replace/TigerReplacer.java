@@ -4,7 +4,7 @@ import java.lang.reflect.Method;
 import org.springframework.beans.factory.support.MethodReplacer;
 
 /**
- * Created by sbt-nikiforov-mo on 14.03.16.
+ * Created by zigzzzag on 14.03.16.
  */
 public class TigerReplacer implements MethodReplacer {
 

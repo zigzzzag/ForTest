@@ -6,7 +6,7 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 /**
- * Created by SBT-Nikiforov-MO on 19.06.2015.
+ * Created by zigzzzag on 19.06.2015.
  */
 public class QueueTest {
 

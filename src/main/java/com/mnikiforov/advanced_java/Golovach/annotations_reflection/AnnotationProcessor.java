@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by SBT-Nikiforov-MO on 11.08.2015.
+ * Created by zigzzzag on 11.08.2015.
  */
 public class AnnotationProcessor {
 

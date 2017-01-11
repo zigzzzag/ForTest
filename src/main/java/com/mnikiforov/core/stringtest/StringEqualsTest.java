@@ -1,7 +1,7 @@
 package com.mnikiforov.core.stringtest;
 
 /**
- * Created by sbt-nikiforov-mo on 15.10.15.
+ * Created by zigzzzag on 15.10.15.
  */
 public class StringEqualsTest {
 

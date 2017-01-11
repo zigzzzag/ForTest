@@ -8,7 +8,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by sbt-nikiforov-mo on 25.01.16.
+ * Created by zigzzzag on 25.01.16.
  */
 public class CTRunner {
 

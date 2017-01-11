@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by sbt-nikiforov-mo on 10/5/16.
+ * Created by zigzzzag on 10/5/16.
  */
 public class HashMapChangeHashTest {
 

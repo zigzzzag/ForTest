@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * Created by SBT-Nikiforov-MO on 24.07.2015.
+ * Created by zigzzzag on 24.07.2015.
  */
 public class Holiday implements Comparable<Holiday> {
 

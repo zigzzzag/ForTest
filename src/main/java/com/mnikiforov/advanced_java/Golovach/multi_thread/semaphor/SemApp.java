@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.concurrent.Semaphore;
 
 /**
- * Created by SBT-Nikiforov-MO on 01.07.2015.
+ * Created by zigzzzag on 01.07.2015.
  */
 public class SemApp {
 

@@ -3,7 +3,7 @@ package com.mnikiforov.advanced_java.producer_consumer;
 import java.util.Random;
 
 /**
- * Created by sbt-nikiforov-mo on 26.10.15.
+ * Created by zigzzzag on 26.10.15.
  */
 public class Consumer implements Runnable {
 

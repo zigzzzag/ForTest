@@ -1,7 +1,7 @@
 package com.mnikiforov.core.sout_test;
 
 /**
- * Created by SBT-Nikiforov-MO on 24.09.2015.
+ * Created by zigzzzag on 24.09.2015.
  */
 public class SOUTTest {
     private static final int ITER_COUNT = 100;

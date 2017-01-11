@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.TimeZone;
 
 /**
- * Created by SBT-Nikiforov-MO on 18.08.2015.
+ * Created by zigzzzag on 18.08.2015.
  */
 public class MoscowBaghdad {
 

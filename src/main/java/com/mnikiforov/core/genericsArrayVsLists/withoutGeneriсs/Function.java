@@ -1,7 +1,7 @@
 package com.mnikiforov.core.genericsArrayVsLists.withoutGeneriсs;
 
 /**
- * Created by SBT-Nikiforov-MO on 23.04.2015.
+ * Created by zigzzzag on 23.04.2015.
  */
 public interface Function {
 

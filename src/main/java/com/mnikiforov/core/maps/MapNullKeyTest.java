@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by sbt-nikiforov-mo on 23.11.15.
+ * Created by zigzzzag on 23.11.15.
  */
 public class MapNullKeyTest {
 

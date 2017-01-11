@@ -14,7 +14,7 @@ import javax.swing.event.DocumentListener;
 import javax.swing.text.MaskFormatter;
 
 /**
- * Created by sbt-nikiforov-mo on 12/12/16.
+ * Created by zigzzzag on 12/12/16.
  */
 public class MaskInputSample2 {
     public static void main(String args[]) {

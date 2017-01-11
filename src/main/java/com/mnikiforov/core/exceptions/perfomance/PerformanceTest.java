@@ -1,7 +1,7 @@
 package com.mnikiforov.core.exceptions.perfomance;
 
 /**
- * Created by sbt-nikiforov-mo on 07.07.16.
+ * Created by zigzzzag on 07.07.16.
  */
 public class PerformanceTest {
     private static final int COUNT_ITER = 1_000_000;

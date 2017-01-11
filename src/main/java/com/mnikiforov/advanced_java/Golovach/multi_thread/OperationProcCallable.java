@@ -6,7 +6,7 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.CountDownLatch;
 
 /**
- * Created by SBT-Nikiforov-MO on 30.06.2015.
+ * Created by zigzzzag on 30.06.2015.
  */
 public class OperationProcCallable implements Callable<TransferInfo> {
 

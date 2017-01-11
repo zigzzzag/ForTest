@@ -10,7 +10,7 @@ import org.hibernate.cfg.Configuration;
 import java.util.List;
 
 /**
- * Created by sbt-nikiforov-mo on 01.12.15.
+ * Created by zigzzzag on 01.12.15.
  */
 public class QueryObjectTest {
 

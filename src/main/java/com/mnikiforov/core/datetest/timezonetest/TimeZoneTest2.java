@@ -8,7 +8,7 @@ import java.util.Calendar;
 import java.util.TimeZone;
 
 /**
- * Created by SBT-Nikiforov-MO on 30.07.2015.
+ * Created by zigzzzag on 30.07.2015.
  */
 public class TimeZoneTest2 {
 

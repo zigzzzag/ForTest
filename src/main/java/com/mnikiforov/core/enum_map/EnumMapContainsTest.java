@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Created by sbt-nikiforov-mo on 15.08.16.
+ * Created by zigzzzag on 15.08.16.
  */
 public class EnumMapContainsTest {
 

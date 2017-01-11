@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 /**
- * Created by sbt-nikiforov-mo on 25.11.15.
+ * Created by zigzzzag on 25.11.15.
  */
 @Entity
 public class Vehicle {

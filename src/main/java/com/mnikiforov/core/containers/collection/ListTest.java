@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Created by sbt-nikiforov-mo on 29.02.16.
+ * Created by zigzzzag on 29.02.16.
  */
 public class ListTest {
 

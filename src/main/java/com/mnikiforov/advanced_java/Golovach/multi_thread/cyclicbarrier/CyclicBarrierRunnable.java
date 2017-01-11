@@ -4,7 +4,7 @@ import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 
 /**
- * Created by SBT-Nikiforov-MO on 01.07.2015.
+ * Created by zigzzzag on 01.07.2015.
  */
 public class CyclicBarrierRunnable implements Runnable {
 

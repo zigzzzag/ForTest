@@ -5,7 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
- * Created by sbt-nikiforov-mo on 27.11.15.
+ * Created by zigzzzag on 27.11.15.
  */
 @Entity
 public class Product {

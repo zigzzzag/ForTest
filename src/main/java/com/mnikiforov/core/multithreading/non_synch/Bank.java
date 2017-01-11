@@ -3,7 +3,7 @@ package com.mnikiforov.core.multithreading.non_synch;
 /**
  * Имитируемый банк с целым рядом счетов
  * <p>
- * Created by sbt-nikiforov-mo on 28.07.16.
+ * Created by zigzzzag on 28.07.16.
  */
 public class Bank {
 

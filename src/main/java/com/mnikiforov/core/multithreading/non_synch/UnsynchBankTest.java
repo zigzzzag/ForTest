@@ -3,7 +3,7 @@ package com.mnikiforov.core.multithreading.non_synch;
 /**
  * В этой программе демонстрируется нарушение данных при произвольном доступе к структуре данных из многих потоков
  * <p>
- * Created by sbt-nikiforov-mo on 28.07.16.
+ * Created by zigzzzag on 28.07.16.
  */
 public class UnsynchBankTest {
 

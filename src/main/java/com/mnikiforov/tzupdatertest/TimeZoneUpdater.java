@@ -3,7 +3,7 @@ package com.mnikiforov.tzupdatertest;
 import java.io.IOException;
 
 /**
- * Created by SBT-Nikiforov-MO on 21.08.2015.
+ * Created by zigzzzag on 21.08.2015.
  */
 public class TimeZoneUpdater {
 

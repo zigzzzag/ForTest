@@ -5,7 +5,7 @@ import com.mnikiforov.advanced_java.Golovach.multi_thread.transfer.Transfer;
 import com.mnikiforov.advanced_java.Golovach.multi_thread.transfer.TransferWithLockTimeout;
 
 /**
- * Created by SBT-Nikiforov-MO on 01.07.2015.
+ * Created by zigzzzag on 01.07.2015.
  */
 public class TestByTransferWithCallableCDL {
 

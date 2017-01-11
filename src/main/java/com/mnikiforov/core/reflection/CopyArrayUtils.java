@@ -6,7 +6,7 @@ import java.util.Arrays;
 import static java.lang.Math.min;
 
 /**
- * Created by sbt-nikiforov-mo on 15.06.16.
+ * Created by zigzzzag on 15.06.16.
  */
 public class CopyArrayUtils {
 

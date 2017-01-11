@@ -8,7 +8,7 @@ import java.util.concurrent.BlockingQueue;
 /**
  * Осуществляет поиск заданного ключевого слова
  * <p>
- * Created by sbt-nikiforov-mo on 12.08.16.
+ * Created by zigzzzag on 12.08.16.
  */
 public class SearchTask implements Runnable {
 

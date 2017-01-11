@@ -4,7 +4,7 @@ import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 
 /**
- * Created by sbt-nikiforov-mo on 1/10/17.
+ * Created by zigzzzag on 1/10/17.
  */
 public class LogInterceptor implements MethodInterceptor {
 

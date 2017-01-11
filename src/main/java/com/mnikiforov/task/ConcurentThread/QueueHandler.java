@@ -8,7 +8,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * Created by sbt-nikiforov-mo on 26.01.16.
+ * Created by zigzzzag on 26.01.16.
  */
 public class QueueHandler {
 

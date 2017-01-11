@@ -6,7 +6,7 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
 /**
- * Created by sbt-nikiforov-mo on 10/24/16.
+ * Created by zigzzzag on 10/24/16.
  */
 public class NotSerRefTest implements Serializable {
 

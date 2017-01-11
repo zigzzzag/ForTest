@@ -10,7 +10,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 /**
- * Created by sbt-nikiforov-mo on 30.06.16.
+ * Created by zigzzzag on 30.06.16.
  */
 public class CrunchifyJavaMailExample {
     static Properties mailServerProperties;

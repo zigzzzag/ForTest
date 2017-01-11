@@ -8,7 +8,7 @@ import java.util.List;
 import org.apache.commons.lang3.time.FastDateFormat;
 
 /**
- * Created by sbt-nikiforov-mo on 24.08.16.
+ * Created by zigzzzag on 24.08.16.
  */
 public class FastFormatVsSimpleFormat {
 

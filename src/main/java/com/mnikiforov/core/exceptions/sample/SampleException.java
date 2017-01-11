@@ -1,7 +1,7 @@
 package com.mnikiforov.core.exceptions.sample;
 
 /**
- * Created by SBT-Nikiforov-MO on 24.09.2015.
+ * Created by zigzzzag on 24.09.2015.
  */
 public class SampleException extends Exception {
 

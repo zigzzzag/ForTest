@@ -4,7 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 /**
- * Created by sbt-nikiforov-mo on 24.11.15.
+ * Created by zigzzzag on 24.11.15.
  */
 @Embeddable
 public class Address {

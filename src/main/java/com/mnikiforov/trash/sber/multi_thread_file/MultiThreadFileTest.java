@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
 
 /**
- * Created by sbt-nikiforov-mo on 02.03.16.
+ * Created by zigzzzag on 02.03.16.
  */
 public class MultiThreadFileTest implements Runnable {
 

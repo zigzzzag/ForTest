@@ -10,7 +10,7 @@ import org.hibernate.criterion.Restrictions;
 import java.util.List;
 
 /**
- * Created by sbt-nikiforov-mo on 04.12.15.
+ * Created by zigzzzag on 04.12.15.
  */
 public class CriteriaTest {
 

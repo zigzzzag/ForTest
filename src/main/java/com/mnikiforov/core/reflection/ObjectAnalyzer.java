@@ -7,7 +7,7 @@ import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 
 /**
- * Created by sbt-nikiforov-mo on 14.06.16.
+ * Created by zigzzzag on 14.06.16.
  */
 public class ObjectAnalyzer {
 

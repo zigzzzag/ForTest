@@ -16,7 +16,7 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by SBT-Nikiforov-MO on 22.06.2015.
+ * Created by zigzzzag on 22.06.2015.
  */
 public class Operations {
 

@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * Created by sbt-nikiforov-mo on 02.03.16.
+ * Created by zigzzzag on 02.03.16.
  */
 public interface Realization {
 

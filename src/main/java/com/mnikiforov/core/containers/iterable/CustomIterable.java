@@ -3,7 +3,7 @@ package com.mnikiforov.core.containers.iterable;
 import java.util.Iterator;
 
 /**
- * Created by sbt-nikiforov-mo on 01.03.16.
+ * Created by zigzzzag on 01.03.16.
  */
 public class CustomIterable<T> implements Iterable<T> {
 

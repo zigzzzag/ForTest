@@ -8,7 +8,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Created by SBT-Nikiforov-MO on 11.08.2015.
+ * Created by zigzzzag on 11.08.2015.
  */
 @Documented
 @Inherited

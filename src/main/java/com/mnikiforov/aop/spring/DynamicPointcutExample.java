@@ -7,7 +7,7 @@ import org.springframework.aop.framework.ProxyFactory;
 import org.springframework.aop.support.DefaultPointcutAdvisor;
 
 /**
- * Created by sbt-nikiforov-mo on 1/10/17.
+ * Created by zigzzzag on 1/10/17.
  */
 public class DynamicPointcutExample {
 

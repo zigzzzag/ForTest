@@ -3,7 +3,7 @@ package com.mnikiforov.core.multithreading.blocking_queue.impl_test;
 import java.util.concurrent.BlockingQueue;
 
 /**
- * Created by sbt-nikiforov-mo on 15.08.16.
+ * Created by zigzzzag on 15.08.16.
  */
 public class Consumer implements Runnable {
 

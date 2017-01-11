@@ -5,7 +5,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * Created by sbt-nikiforov-mo on 11.03.16.
+ * Created by zigzzzag on 11.03.16.
  */
 @XmlRootElement
 public class Customer {

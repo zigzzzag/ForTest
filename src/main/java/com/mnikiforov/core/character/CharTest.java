@@ -1,7 +1,7 @@
 package com.mnikiforov.core.character;
 
 /**
- * Created by sbt-nikiforov-mo on 10.06.16.
+ * Created by zigzzzag on 10.06.16.
  */
 public class CharTest {
 

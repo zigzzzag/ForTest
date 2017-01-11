@@ -6,7 +6,7 @@ import java.util.concurrent.BlockingQueue;
 /**
  * Перечисляет все файлы в каталоге и подкаталогах
  * <p>
- * Created by sbt-nikiforov-mo on 12.08.16.
+ * Created by zigzzzag on 12.08.16.
  */
 public class FileEnumerationTask implements Runnable {
 

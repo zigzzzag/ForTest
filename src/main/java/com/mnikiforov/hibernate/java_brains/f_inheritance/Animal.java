@@ -7,7 +7,7 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 
 /**
- * Created by sbt-nikiforov-mo on 26.11.15.
+ * Created by zigzzzag on 26.11.15.
  */
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)

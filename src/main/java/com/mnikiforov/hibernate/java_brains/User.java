@@ -5,7 +5,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
- * Created by sbt-nikiforov-mo on 24.11.15.
+ * Created by zigzzzag on 24.11.15.
  */
 public class User {
 

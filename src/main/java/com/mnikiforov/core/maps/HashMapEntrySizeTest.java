@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by SBT-Nikiforov-MO on 22.07.2015.
+ * Created by zigzzzag on 22.07.2015.
  */
 public class HashMapEntrySizeTest {
 

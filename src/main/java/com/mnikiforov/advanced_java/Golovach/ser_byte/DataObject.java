@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.Serializable;
 
 /**
- * Created by SBT-Nikiforov-MO on 12.08.2015.
+ * Created by zigzzzag on 12.08.2015.
  */
 public class DataObject extends NonSerializable implements Serializable {
 

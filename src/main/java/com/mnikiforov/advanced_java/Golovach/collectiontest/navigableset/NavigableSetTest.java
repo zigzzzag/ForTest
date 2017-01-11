@@ -9,7 +9,7 @@ import java.util.SortedSet;
 import java.util.TreeSet;
 
 /**
- * Created by SBT-Nikiforov-MO on 16.06.2015.
+ * Created by zigzzzag on 16.06.2015.
  */
 public class NavigableSetTest {
     private static final Logger log = LoggerFactory.getLogger(NavigableSetTest.class);

@@ -7,7 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
- * Created by sbt-nikiforov-mo on 12/1/16.
+ * Created by zigzzzag on 12/1/16.
  */
 @Entity(name = "ACCOUNT")
 public class Account {

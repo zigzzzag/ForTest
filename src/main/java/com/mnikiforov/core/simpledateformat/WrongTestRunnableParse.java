@@ -5,7 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * Created by SBT-Nikiforov-MO on 27.03.2015.
+ * Created by zigzzzag on 27.03.2015.
  */
 public class WrongTestRunnableParse implements Runnable {
     private static final int countIter = 100;

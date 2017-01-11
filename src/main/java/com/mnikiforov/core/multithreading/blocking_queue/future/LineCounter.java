@@ -14,7 +14,7 @@ import org.apache.commons.lang.StringUtils;
 /**
  * Подсчитывает файлы, содержащие заданное ключевое слово, в каталоге и его подкаталогах
  * <p>
- * Created by sbt-nikiforov-mo on 18.08.16.
+ * Created by zigzzzag on 18.08.16.
  */
 public class LineCounter implements Callable<Integer> {
     private File directory;

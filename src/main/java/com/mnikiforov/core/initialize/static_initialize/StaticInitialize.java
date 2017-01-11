@@ -1,7 +1,7 @@
 package com.mnikiforov.core.initialize.static_initialize;
 
 /**
- * Created by sbt-nikiforov-mo on 16.02.16.
+ * Created by zigzzzag on 16.02.16.
  */
 public class StaticInitialize {
 

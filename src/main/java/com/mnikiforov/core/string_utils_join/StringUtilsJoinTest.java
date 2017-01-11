@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Created by SBT-Nikiforov-MO on 09.06.2015.
+ * Created by zigzzzag on 09.06.2015.
  */
 public class StringUtilsJoinTest {
 

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by sbt-nikiforov-mo on 03.08.16.
+ * Created by zigzzzag on 03.08.16.
  */
 public class GenericStringTest {
 

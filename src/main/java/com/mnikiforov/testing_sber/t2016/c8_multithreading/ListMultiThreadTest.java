@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Created by sbt-nikiforov-mo on 10/24/16.
+ * Created by zigzzzag on 10/24/16.
  */
 public class ListMultiThreadTest {
 

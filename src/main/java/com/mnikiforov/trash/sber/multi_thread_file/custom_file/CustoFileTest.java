@@ -9,7 +9,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by sbt-nikiforov-mo on 02.03.16.
+ * Created by zigzzzag on 02.03.16.
  */
 public class CustoFileTest {
 

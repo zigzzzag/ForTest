@@ -18,7 +18,7 @@ import javax.swing.text.DefaultFormatterFactory;
 import javax.swing.text.NumberFormatter;
 
 /**
- * Created by sbt-nikiforov-mo on 12/12/16.
+ * Created by zigzzzag on 12/12/16.
  */
 public class FormatterFactoryDemo extends JPanel implements PropertyChangeListener {
     //Values for the text fields

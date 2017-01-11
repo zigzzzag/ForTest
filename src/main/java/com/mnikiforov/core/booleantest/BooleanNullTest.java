@@ -1,7 +1,7 @@
 package com.mnikiforov.core.booleantest;
 
 /**
- * Created by sbt-nikiforov-mo on 13.09.16.
+ * Created by zigzzzag on 13.09.16.
  */
 public class BooleanNullTest {
 

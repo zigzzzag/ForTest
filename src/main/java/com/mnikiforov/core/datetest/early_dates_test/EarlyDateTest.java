@@ -12,7 +12,7 @@ import java.util.Date;
 import java.util.TimeZone;
 
 /**
- * Created by SBT-Nikiforov-MO on 17.08.2015.
+ * Created by zigzzzag on 17.08.2015.
  */
 public class EarlyDateTest {
 

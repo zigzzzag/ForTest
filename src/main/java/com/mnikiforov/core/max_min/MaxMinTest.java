@@ -6,7 +6,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 /**
- * Created by sbt-nikiforov-mo on 03.06.16.
+ * Created by zigzzzag on 03.06.16.
  */
 public class MaxMinTest {
 

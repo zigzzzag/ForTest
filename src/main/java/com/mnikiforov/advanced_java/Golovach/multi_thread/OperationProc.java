@@ -4,7 +4,7 @@ import com.mnikiforov.advanced_java.Golovach.multi_thread.exceptions.Insufficien
 import com.mnikiforov.advanced_java.Golovach.multi_thread.transfer.Transfer;
 
 /**
- * Created by SBT-Nikiforov-MO on 29.06.2015.
+ * Created by zigzzzag on 29.06.2015.
  */
 public class OperationProc implements Runnable {
 

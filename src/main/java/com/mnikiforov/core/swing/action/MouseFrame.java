@@ -4,7 +4,7 @@ import javax.swing.JFrame;
 import java.awt.EventQueue;
 
 /**
- * Created by sbt-nikiforov-mo on 28.06.16.
+ * Created by zigzzzag on 28.06.16.
  */
 public class MouseFrame extends JFrame {
 

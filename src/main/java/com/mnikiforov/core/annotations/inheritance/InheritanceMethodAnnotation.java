@@ -3,7 +3,7 @@ package com.mnikiforov.core.annotations.inheritance;
 import java.lang.reflect.Method;
 
 /**
- * Created by sbt-nikiforov-mo on 11.08.16.
+ * Created by zigzzzag on 11.08.16.
  */
 public class InheritanceMethodAnnotation {
 

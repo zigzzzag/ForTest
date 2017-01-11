@@ -1,7 +1,7 @@
 package com.mnikiforov.core.operations.shift;
 
 /**
- * Created by sbt-nikiforov-mo on 31.05.16.
+ * Created by zigzzzag on 31.05.16.
  */
 public class ShiftTest {
 

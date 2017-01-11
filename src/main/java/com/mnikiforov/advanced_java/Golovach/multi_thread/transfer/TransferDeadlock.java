@@ -6,7 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Created by SBT-Nikiforov-MO on 29.06.2015.
+ * Created by zigzzzag on 29.06.2015.
  */
 public class TransferDeadlock implements Transfer {
 

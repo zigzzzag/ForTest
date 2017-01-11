@@ -3,7 +3,7 @@ package com.mnikiforov.advanced_java.Golovach.collectiontest.maptest;
 import java.util.Map;
 
 /**
- * Created by SBT-Nikiforov-MO on 18.06.2015.
+ * Created by zigzzzag on 18.06.2015.
  */
 public class MapTestUtils {
 

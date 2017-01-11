@@ -5,7 +5,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * Created by sbt-nikiforov-mo on 10/20/16.
+ * Created by zigzzzag on 10/20/16.
  */
 public class Safelock {
     static class Friend {

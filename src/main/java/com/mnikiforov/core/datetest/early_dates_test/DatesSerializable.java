@@ -7,7 +7,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * Created by SBT-Nikiforov-MO on 17.08.2015.
+ * Created by zigzzzag on 17.08.2015.
  */
 public class DatesSerializable implements Serializable {
 

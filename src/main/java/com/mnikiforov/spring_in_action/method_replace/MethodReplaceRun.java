@@ -4,7 +4,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * Created by sbt-nikiforov-mo on 14.03.16.
+ * Created by zigzzzag on 14.03.16.
  */
 public class MethodReplaceRun {
 

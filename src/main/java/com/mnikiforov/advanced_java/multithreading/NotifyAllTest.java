@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * Created by sbt-nikiforov-mo on 10/24/16.
+ * Created by zigzzzag on 10/24/16.
  */
 public class NotifyAllTest {
 

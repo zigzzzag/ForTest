@@ -6,7 +6,7 @@ import java.io.IOException;
 import static com.mnikiforov.trash.sber.multi_thread_file.MultiThreadFileTest.*;
 
 /**
- * Created by sbt-nikiforov-mo on 02.03.16.
+ * Created by zigzzzag on 02.03.16.
  */
 public class PatchRealization implements Realization {
 

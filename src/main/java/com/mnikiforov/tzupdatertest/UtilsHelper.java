@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.io.StreamCorruptedException;
 
 /**
- * Created by SBT-Nikiforov-MO on 21.08.2015.
+ * Created by zigzzzag on 21.08.2015.
  */
 public class UtilsHelper {
     public static final byte[] JAVAZM_LABEL = {

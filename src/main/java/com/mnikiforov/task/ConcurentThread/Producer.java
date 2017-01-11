@@ -8,7 +8,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
- * Created by sbt-nikiforov-mo on 25.01.16.
+ * Created by zigzzzag on 25.01.16.
  */
 public class Producer implements Runnable {
 

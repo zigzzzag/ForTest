@@ -7,7 +7,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 /**
- * Created by sbt-nikiforov-mo on 10/24/16.
+ * Created by zigzzzag on 10/24/16.
  */
 public class Test {
 

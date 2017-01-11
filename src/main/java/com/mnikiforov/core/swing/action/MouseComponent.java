@@ -14,7 +14,7 @@ import java.util.ArrayList;
 /**
  * Компонент для операций мышью по добавлению и удалению квадратов
  * <p>
- * Created by sbt-nikiforov-mo on 28.06.16.
+ * Created by zigzzzag on 28.06.16.
  */
 public class MouseComponent extends JComponent {
 

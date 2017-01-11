@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.List;
 
 /**
- * Created by SBT-Nikiforov-MO on 03.08.2015.
+ * Created by zigzzzag on 03.08.2015.
  */
 public class SomeType<T> {
 

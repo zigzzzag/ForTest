@@ -20,7 +20,7 @@ import java.awt.event.ActionEvent;
 /**
  * Фрейм с панелью для демонстрации действий по изменению цвета
  * <p>
- * Created by sbt-nikiforov-mo on 27.06.16.
+ * Created by zigzzzag on 27.06.16.
  */
 public class ActionFrame extends JFrame {
 

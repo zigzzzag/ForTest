@@ -1,7 +1,7 @@
 package com.mnikiforov.core.linksToObject;
 
 /**
- * Created by sbt-nikiforov-mo on 19.10.15.
+ * Created by zigzzzag on 19.10.15.
  */
 public class LinksToObject {
 

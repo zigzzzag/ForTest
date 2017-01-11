@@ -1,7 +1,7 @@
 package com.mnikiforov.core.overloading;
 
 /**
- * Created by sbt-nikiforov-mo on 15.02.16.
+ * Created by zigzzzag on 15.02.16.
  */
 public class OverloadByReturnType {
 

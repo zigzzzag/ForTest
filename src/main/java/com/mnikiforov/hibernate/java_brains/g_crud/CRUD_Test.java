@@ -5,7 +5,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 /**
- * Created by sbt-nikiforov-mo on 27.11.15.
+ * Created by zigzzzag on 27.11.15.
  */
 public class CRUD_Test {
 

@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 
 
 /**
- * Created by sbt-nikiforov-mo on 25.08.16.
+ * Created by zigzzzag on 25.08.16.
  */
 public class NDC_Test {
 

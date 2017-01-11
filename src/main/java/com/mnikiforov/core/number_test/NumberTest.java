@@ -3,7 +3,7 @@ package com.mnikiforov.core.number_test;
 import org.apache.commons.lang.math.NumberUtils;
 
 /**
- * Created by sbt-nikiforov-mo on 13.10.15.
+ * Created by zigzzzag on 13.10.15.
  */
 public class NumberTest {
 

@@ -5,7 +5,7 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingDeque;
 
 /**
- * Created by sbt-nikiforov-mo on 15.08.16.
+ * Created by zigzzzag on 15.08.16.
  */
 public class LinkedBlockingQueue {
 

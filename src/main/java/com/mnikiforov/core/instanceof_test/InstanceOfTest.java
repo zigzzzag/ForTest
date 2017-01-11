@@ -1,7 +1,7 @@
 package com.mnikiforov.core.instanceof_test;
 
 /**
- * Created by sbt-nikiforov-mo on 16.05.16.
+ * Created by zigzzzag on 16.05.16.
  */
 public class InstanceOfTest {
 

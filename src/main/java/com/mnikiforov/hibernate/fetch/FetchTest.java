@@ -9,7 +9,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
 /**
- * Created by sbt-nikiforov-mo on 12/1/16.
+ * Created by zigzzzag on 12/1/16.
  */
 public class FetchTest {
 

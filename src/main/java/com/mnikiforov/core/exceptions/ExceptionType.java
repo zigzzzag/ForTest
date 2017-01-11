@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 /**
- * Created by sbt-nikiforov-mo on 07.10.15.
+ * Created by zigzzzag on 07.10.15.
  */
 public class ExceptionType {
 

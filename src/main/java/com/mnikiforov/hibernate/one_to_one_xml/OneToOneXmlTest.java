@@ -7,7 +7,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
 /**
- * Created by sbt-nikiforov-mo on 11/16/16.
+ * Created by zigzzzag on 11/16/16.
  */
 public class OneToOneXmlTest {
 

@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.TimeZone;
 
 /**
- * Created by SBT-Nikiforov-MO on 13.04.2015.
+ * Created by zigzzzag on 13.04.2015.
  */
 public class TimeZoneTest {
 

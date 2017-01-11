@@ -1,7 +1,7 @@
 package com.mnikiforov.core.stringtest;
 
 /**
- * Created by sbt-nikiforov-mo on 24.11.15.
+ * Created by zigzzzag on 24.11.15.
  */
 public class StringCast {
 

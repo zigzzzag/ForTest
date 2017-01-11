@@ -1,7 +1,7 @@
 package com.mnikiforov.core.number_test;
 
 /**
- * Created by sbt-nikiforov-mo on 07.06.16.
+ * Created by zigzzzag on 07.06.16.
  */
 public class InfinityCycle {
 

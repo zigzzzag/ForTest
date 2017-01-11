@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 /**
- * Created by SBT-Nikiforov-MO on 07.09.2015.
+ * Created by zigzzzag on 07.09.2015.
  */
 public class HashCodeTest {
     private boolean a;

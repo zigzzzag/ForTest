@@ -6,7 +6,7 @@ import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
 /**
- * Created by sbt-nikiforov-mo on 12.08.16.
+ * Created by zigzzzag on 12.08.16.
  */
 public class BlockingQueueTest {
 

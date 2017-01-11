@@ -1,7 +1,7 @@
 package com.mnikiforov.interestingfacts;
 
 /**
- * Created by SBT-Nikiforov-MO on 26.03.2015.
+ * Created by zigzzzag on 26.03.2015.
  */
 public class ConditionalOperator {
 

@@ -3,7 +3,7 @@ package com.mnikiforov.core.multithreading.non_synch;
 /**
  * Исполняемый поток, в котором деньги переводятся с одного банковского счета на другой
  * <p>
- * Created by sbt-nikiforov-mo on 28.07.16.
+ * Created by zigzzzag on 28.07.16.
  */
 public class TransferRunnable implements Runnable {
 

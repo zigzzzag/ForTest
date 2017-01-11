@@ -2,7 +2,7 @@ package com.mnikiforov.core.datetest.datesqltest;
 
 
 /**
- * Created by sbt-nikiforov-mo on 27.06.16.
+ * Created by zigzzzag on 27.06.16.
  */
 public class UtilDateToSqlDate {
 

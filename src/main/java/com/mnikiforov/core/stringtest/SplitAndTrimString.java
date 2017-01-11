@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Created by sbt-nikiforov-mo on 14.12.15.
+ * Created by zigzzzag on 14.12.15.
  */
 public class SplitAndTrimString {
 

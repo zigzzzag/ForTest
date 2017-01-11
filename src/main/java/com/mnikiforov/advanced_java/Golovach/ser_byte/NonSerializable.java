@@ -1,7 +1,7 @@
 package com.mnikiforov.advanced_java.Golovach.ser_byte;
 
 /**
- * Created by SBT-Nikiforov-MO on 12.08.2015.
+ * Created by zigzzzag on 12.08.2015.
  */
 public class NonSerializable {
 

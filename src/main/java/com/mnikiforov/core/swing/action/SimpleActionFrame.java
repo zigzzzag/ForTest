@@ -11,7 +11,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * Created by sbt-nikiforov-mo on 22.06.16.
+ * Created by zigzzzag on 22.06.16.
  */
 public class SimpleActionFrame extends JFrame {
 

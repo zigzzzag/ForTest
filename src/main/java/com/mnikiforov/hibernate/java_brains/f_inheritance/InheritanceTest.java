@@ -5,7 +5,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 /**
- * Created by sbt-nikiforov-mo on 26.11.15.
+ * Created by zigzzzag on 26.11.15.
  */
 public class InheritanceTest {
 

@@ -5,7 +5,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * Created by SBT-Nikiforov-MO on 22.06.2015.
+ * Created by zigzzzag on 22.06.2015.
  */
 public class Account {
 

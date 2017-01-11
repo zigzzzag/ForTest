@@ -3,7 +3,7 @@ package com.mnikiforov.core.containers.collection;
 import java.util.List;
 
 /**
- * Created by sbt-nikiforov-mo on 30.05.16.
+ * Created by zigzzzag on 30.05.16.
  */
 public class CollectionsNullTest {
 

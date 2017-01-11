@@ -12,7 +12,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by SBT-Nikiforov-MO on 30.06.2015.
+ * Created by zigzzzag on 30.06.2015.
  */
 public class TestSimple {
 

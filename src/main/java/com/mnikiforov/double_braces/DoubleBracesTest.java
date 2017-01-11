@@ -3,7 +3,7 @@ package com.mnikiforov.double_braces;
 import com.mnikiforov.core.reflection.ClassInfoUtils;
 
 /**
- * Created by sbt-nikiforov-mo on 15.06.16.
+ * Created by zigzzzag on 15.06.16.
  */
 public class DoubleBracesTest {
 

@@ -8,7 +8,7 @@ import java.io.ObjectInput;
 import java.io.ObjectOutput;
 
 /**
- * Created by SBT-Nikiforov-MO on 12.08.2015.
+ * Created by zigzzzag on 12.08.2015.
  */
 public class CustomObject implements Externalizable {
 

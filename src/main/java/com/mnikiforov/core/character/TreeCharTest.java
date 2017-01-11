@@ -4,7 +4,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 /**
- * Created by sbt-nikiforov-mo on 10.06.16.
+ * Created by zigzzzag on 10.06.16.
  */
 public class TreeCharTest {
     private static Set<String> set = new TreeSet<String>();

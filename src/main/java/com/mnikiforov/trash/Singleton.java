@@ -1,7 +1,7 @@
 package com.mnikiforov.trash;
 
 /**
- * Created by sbt-nikiforov-mo on 26.10.15.
+ * Created by zigzzzag on 26.10.15.
  */
 public class Singleton {
     private static Singleton s = new Singleton();

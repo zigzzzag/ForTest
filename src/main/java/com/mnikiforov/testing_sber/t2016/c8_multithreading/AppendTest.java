@@ -3,7 +3,7 @@ package com.mnikiforov.testing_sber.t2016.c8_multithreading;
 import java.util.concurrent.CountDownLatch;
 
 /**
- * Created by sbt-nikiforov-mo on 10/20/16.
+ * Created by zigzzzag on 10/20/16.
  */
 public class AppendTest {
 

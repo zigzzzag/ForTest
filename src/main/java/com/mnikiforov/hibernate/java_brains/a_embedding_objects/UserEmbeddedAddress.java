@@ -15,7 +15,7 @@ import javax.persistence.TemporalType;
 import java.util.Date;
 
 /**
- * Created by sbt-nikiforov-mo on 12.11.15.
+ * Created by zigzzzag on 12.11.15.
  * <p/>
  *
  * @Table(name = "USER_DETAILS2")

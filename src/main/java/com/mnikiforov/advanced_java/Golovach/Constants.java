@@ -1,7 +1,7 @@
 package com.mnikiforov.advanced_java.Golovach;
 
 /**
- * Created by SBT-Nikiforov-MO on 13.08.2015.
+ * Created by zigzzzag on 13.08.2015.
  */
 public final class Constants {
 

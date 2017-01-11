@@ -1,7 +1,7 @@
 package com.mnikiforov.spring_in_action.method_replace;
 
 /**
- * Created by sbt-nikiforov-mo on 14.03.16.
+ * Created by zigzzzag on 14.03.16.
  */
 public class MagixBoxImpl implements MagicBox {
 

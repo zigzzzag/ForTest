@@ -3,7 +3,7 @@ package com.mnikiforov.trash.sber;
 import java.util.concurrent.locks.Lock;
 
 /**
- * Created by sbt-nikiforov-mo on 29.10.15.
+ * Created by zigzzzag on 29.10.15.
  */
 public class Concurency1 {
 

@@ -3,7 +3,7 @@ package com.mnikiforov.core.datetest.early_dates_test;
 import org.joda.time.LocalDate;
 
 /**
- * Created by SBT-Nikiforov-MO on 20.08.2015.
+ * Created by zigzzzag on 20.08.2015.
  */
 public class JodaTimeTest {
 

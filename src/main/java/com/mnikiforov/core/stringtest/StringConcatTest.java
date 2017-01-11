@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Created by sbt-nikiforov-mo on 06.09.16.
+ * Created by zigzzzag on 06.09.16.
  */
 public class StringConcatTest {
 

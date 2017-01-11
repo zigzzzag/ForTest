@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Created by SBT-Nikiforov-MO on 24.08.2015.
+ * Created by zigzzzag on 24.08.2015.
  */
 public class CompareTZVersionTest extends TestCase {
 

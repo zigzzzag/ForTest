@@ -1,7 +1,7 @@
 package com.mnikiforov.aop.spring;
 
 /**
- * Created by sbt-nikiforov-mo on 1/10/17.
+ * Created by zigzzzag on 1/10/17.
  */
 public class NotDecoratedSomeObject {
 

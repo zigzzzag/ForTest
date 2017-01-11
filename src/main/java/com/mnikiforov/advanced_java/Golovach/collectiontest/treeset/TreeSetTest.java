@@ -6,7 +6,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 /**
- * Created by SBT-Nikiforov-MO on 15.06.2015.
+ * Created by zigzzzag on 15.06.2015.
  */
 public class TreeSetTest {
     public static void main(String[] args) {
