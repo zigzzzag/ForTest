@@ -3,7 +3,7 @@ package com.mnikiforov.aop.spring.annotated;
 import org.springframework.stereotype.Component;
 
 /**
- * Created by sbt-nikiforov-mo on 1/11/17.
+ * Created by zigzzzag on 1/11/17.
  */
 @Component("longRunner")
 public class SomeObjectAnnotated {

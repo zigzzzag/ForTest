@@ -4,7 +4,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * Created by sbt-nikiforov-mo on 1/11/17.
+ * Created by zigzzzag on 1/11/17.
  */
 public class AspectJDemo {
 
