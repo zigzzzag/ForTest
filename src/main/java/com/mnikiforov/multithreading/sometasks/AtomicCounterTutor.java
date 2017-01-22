@@ -12,7 +12,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class AtomicCounterTutor {
 
     //    int counter = 0;
-    AtomicInteger counter = new AtomicInteger();
+    final AtomicInteger counter = new AtomicInteger();
 
     class TestThread implements Runnable {
         String threadName;
