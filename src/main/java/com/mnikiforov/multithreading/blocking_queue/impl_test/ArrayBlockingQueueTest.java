@@ -1,4 +1,4 @@
-package com.mnikiforov.core.multithreading.blocking_queue.impl_test;
+package com.mnikiforov.multithreading.blocking_queue.impl_test;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;

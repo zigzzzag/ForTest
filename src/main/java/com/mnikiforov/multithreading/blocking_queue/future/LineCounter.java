@@ -1,4 +1,4 @@
-package com.mnikiforov.core.multithreading.blocking_queue.future;
+package com.mnikiforov.multithreading.blocking_queue.future;
 
 import java.io.File;
 import java.io.FileNotFoundException;

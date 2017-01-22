@@ -1,4 +1,4 @@
-package com.mnikiforov.core.multithreading.non_synch;
+package com.mnikiforov.multithreading.non_synch;
 
 /**
  * Имитируемый банк с целым рядом счетов

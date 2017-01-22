@@ -1,4 +1,4 @@
-package com.mnikiforov.core.multithreading.non_synch;
+package com.mnikiforov.multithreading.non_synch;
 
 /**
  * В этой программе демонстрируется нарушение данных при произвольном доступе к структуре данных из многих потоков

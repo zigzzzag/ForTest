@@ -1,4 +1,4 @@
-package com.mnikiforov.core.multithreading.non_synch;
+package com.mnikiforov.multithreading.non_synch;
 
 /**
  * Исполняемый поток, в котором деньги переводятся с одного банковского счета на другой
