@@ -8,6 +8,14 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Created by zigzzzag on 22.01.2017.
+ * <p>
+ * Есть счетчик, подсчитывающий количество вызовов.
+ * <p>
+ * Почему счетчик показывает разные значения и не считает до конца?
+ * Как это можно исправить не используя synchronized?
+ * <p>
+ * Попробуйте закомментировать обращение к yield().
+ * Измениться ли значение?
  */
 public class AtomicCounterTutor {
 
