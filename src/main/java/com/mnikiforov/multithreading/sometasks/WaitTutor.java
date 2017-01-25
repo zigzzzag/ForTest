@@ -1,5 +1,6 @@
 package com.mnikiforov.multithreading.sometasks;
 
+import java.util.concurrent.atomic.AtomicInteger;
 import org.junit.Test;
 
 /**
@@ -17,10 +18,14 @@ import org.junit.Test;
  */
 public class WaitTutor {
 
-    Thread t1, t2;
+    private static final int MAIN_ITERATE_COUNT = 100_000;
+
     final Object monitor = new Object();
-    int runningThreadNumber = 1;
-    int t1Counter = 0, t2Counter = 0;
+    AtomicInteger runningThreadNumber = new AtomicInteger(3);
+    AtomicInteger t1Counter = new AtomicInteger();
+    AtomicInteger t2Counter = new AtomicInteger();
+//    int t1Counter = 0;
+//    int t2Counter = 0;
     //int maxCounter = 0;
 
     class TestThread implements Runnable {
@@ -34,37 +39,45 @@ public class WaitTutor {
 
         @Override
         public void run() {
-            for (int i = 0; i < 100; i++) {
+            for (int i = 1; i < MAIN_ITERATE_COUNT; i++) {
                 synchronized (monitor) {
-                    while (n != runningThreadNumber) {
+                    while (n != runningThreadNumber.get()) {
                         try {
                             monitor.wait();
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
                     }
-                    System.out.println(threadName + ":" + i);
+                    System.err.println(threadName + ":" + i);
 
-                    if (n == 1) t1Counter = i;
-                    if (n == 2) t2Counter = i;
+                    if (n == 1) t1Counter.set(i);
+                    if (n == 2) t2Counter.set(i);
+//                    if (n == 1) t1Counter = i;
+//                    if (n == 2) t2Counter = i;
+
+
 //                    monitor.notify();
 //                    Thread.yield();
 
+                    if (t1Counter.get() % 10 == 0 && t2Counter.get() % 10 == 0) {
+//                    if (t1Counter % 10 == 0 && t2Counter % 10 == 0) {
+                        runningThreadNumber.set(3);
+                    } else {
 //                    try {
                         if (n == 1) {
-                            if (i > t2Counter) {
-                                System.out.println("t1 is ahead with i=" + i + ", wait for t2Counter=" + t2Counter);
+//                        if (i > t2Counter) {
+//                            System.out.println("t1 is ahead with i=" + i + ", wait for t2Counter=" + t2Counter);
 //                                monitor.wait();
-                            }
-                            runningThreadNumber = 2;
-                        } else
-                        if (n == 2) {
-                            if (i < t1Counter) {
-                                System.out.println("t2 is ahead with i=" + i + ", wait for t1Counter=" + t1Counter);
+//                        }
+                            runningThreadNumber.set(2);
+                        } else if (n == 2) {
+//                        if (i < t1Counter) {
+//                            System.out.println("t2 is ahead with i=" + i + ", wait for t1Counter=" + t1Counter);
 //                                monitor.wait();
-                            }
-                            runningThreadNumber = 1;
+//                        }
+                            runningThreadNumber.set(1);
                         }
+                    }
 //                    } catch (InterruptedException e) {
 //                        e.printStackTrace();
 //                    }
@@ -75,20 +88,55 @@ public class WaitTutor {
         }
     }
 
+    /**
+     * будет выводить в лог сообщения о
+     * значениях счетчика, кратных 10, например 10, 20, 30...
+     * При этом такие сообщения должны выводиться после того, как все потоки преодолели
+     * кратность 10, но до того, как какой-либо поток двинулся дальше.
+     */
+    class MyltiplicityRunner implements Runnable {
+
+        @Override
+        public void run() {
+            for (int i = 0; i < MAIN_ITERATE_COUNT / 10; i++) {
+                synchronized (monitor) {
+                    while (runningThreadNumber.get() != 3) {
+                        try {
+                            monitor.wait();
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+
+                    System.err.println("MyltiplicityRunner: t1Counter=" + t1Counter + ", t2Counter" + t2Counter);
+                    runningThreadNumber.set(1);
+                    monitor.notifyAll();
+                }
+            }
+        }
+    }
+
     @Test
     public void testThread() {
-        t1 = new Thread(new TestThread("t1", 1));
-        t2 = new Thread(new TestThread("t2", 2));
-        System.out.println("Starting threads");
+        long start = System.currentTimeMillis();
+
+        Thread t1 = new Thread(new TestThread("t1", 1));
+        Thread t2 = new Thread(new TestThread("t2", 2));
+        Thread t3 = new Thread(new MyltiplicityRunner());
+        System.err.println("Starting threads");
         t1.start();
         t2.start();
+        t3.start();
 
-        System.out.println("Waiting for threads");
+        System.err.println("Waiting for threads");
         try {
             t1.join();
             t2.join();
+            t3.join();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
+        System.err.println("FULL TIME: " + (System.currentTimeMillis() - start) + "ms");
     }
 }
