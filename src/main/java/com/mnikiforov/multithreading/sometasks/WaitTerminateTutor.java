@@ -19,7 +19,7 @@ import org.junit.Test;
 public class WaitTerminateTutor {
 
     Thread t1, t2;
-    Object monitor = new Object();
+    final Object monitor = new Object();
     int runningThreadNumber = 1;
     public AtomicBoolean shouldTerminate = new AtomicBoolean();
 
