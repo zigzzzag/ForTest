@@ -15,6 +15,8 @@ public class EnumEqualsTest {
     public static void main(String[] args) {
         Object testObj = null;
 
+        Seasons aaa = Seasons.valueOf("aaa");// IllegalArgumentException
+
         System.out.println(testObj == Seasons.WINTER);
         System.out.println(testObj.equals(Seasons.WINTER));// NPE
     }
