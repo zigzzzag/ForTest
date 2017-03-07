@@ -1,9 +1,13 @@
 package com.mnikiforov.core.enumtest;
 
-/**
- * Created by zigzzzag on 14.06.16.
- */
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.Arrays;
+
 public class EnumEqualsTest {
+
+    private static final Logger LOG = LoggerFactory.getLogger(EnumEqualsTest.class);
 
     public enum Seasons {
         WINTER,
@@ -12,12 +16,23 @@ public class EnumEqualsTest {
         AUTUMN
     }
 
+    @SuppressWarnings("ObjectEqualsNull")
     public static void main(String[] args) {
-        Object testObj = null;
+        LOG.info("Seasons: " + Arrays.toString(Seasons.values()));
 
-        Seasons aaa = Seasons.valueOf("aaa");// IllegalArgumentException
+        try {
+            Seasons.valueOf(null);
+        } catch (NullPointerException e) {
+            LOG.error("Seasons.valueOf(null) throw NPE", e);
+        }
 
-        System.out.println(testObj == Seasons.WINTER);
-        System.out.println(testObj.equals(Seasons.WINTER));// NPE
+        try {
+            Seasons.valueOf("aaa");
+        } catch (IllegalArgumentException e) {
+            LOG.error("throwing IllegalArgumentException with not existing name", e);
+        }
+
+        LOG.info("null == Seasons.WINTER -> " + (null == Seasons.WINTER));
+        LOG.info("Seasons.SUMMER.equals(null) -> " + Seasons.SUMMER.equals(null));
     }
 }
