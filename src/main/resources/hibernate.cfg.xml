@@ -17,6 +17,8 @@
         <property name="hibernate.c3p0.max_statements">50</property>
         <property name="hibernate.c3p0.idle_test_period">3000</property>
 
+        <property name="hibernate.jdbc.batch_size">50</property>
+
         <property name="hibernate.show_sql">true</property>
 
         <property name="hbm2ddl.auto">update</property>
@@ -36,6 +38,7 @@
         <mapping class="com.mnikiforov.hibernate.fetch.Account"/>
         <mapping class="com.mnikiforov.hibernate.one_to_one_annotations.Passport"/>
         <mapping class="com.mnikiforov.hibernate.one_to_one_annotations.User"/>
+        <mapping class="com.mnikiforov.ehcache.perfomance.PerformanceCache"/>
         <mapping resource="hibernate/one_to_one/Stock.hbm.xml"/>
         <mapping resource="hibernate/one_to_one/StockDetail.hbm.xml"/>
     </session-factory>

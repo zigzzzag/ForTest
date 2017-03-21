@@ -1,4 +1,4 @@
-package com.mnikiforov.ehcacheTest;
+package com.mnikiforov.ehcache;
 
 import net.sf.ehcache.Cache;
 import net.sf.ehcache.CacheManager;
