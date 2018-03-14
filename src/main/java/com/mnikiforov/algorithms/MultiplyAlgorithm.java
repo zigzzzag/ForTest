@@ -2,5 +2,5 @@ package com.mnikiforov.algorithms;
 
 public interface MultiplyAlgorithm {
 
-    String multiplay(String arg1, String arg2);
+    String multiply(String arg1, String arg2);
 }

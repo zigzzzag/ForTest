@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 public class NormalMultiply implements MultiplyAlgorithm {
 
     @Override
-    public String multiplay(String arg1, String arg2) {
+    public String multiply(String arg1, String arg2) {
         BigDecimal d1 = new BigDecimal(arg1);
         BigDecimal d2 = new BigDecimal(arg2);
 

@@ -3,7 +3,7 @@ package com.mnikiforov.algorithms;
 public class ColumnMultiply implements MultiplyAlgorithm {
 
     @Override
-    public String multiplay(String arg1, String arg2) {
+    public String multiply(String arg1, String arg2) {
         byte[] numeralArr1 = strToNumeralArr(arg1);
         byte[] numeralArr2 = strToNumeralArr(arg2);
 
