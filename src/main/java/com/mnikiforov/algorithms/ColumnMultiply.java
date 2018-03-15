@@ -14,16 +14,17 @@ public class ColumnMultiply implements MultiplyAlgorithm {
             byte[] columnArrJ = new byte[numeralArr1.length + 1];
             for (int i = numeralArr1.length - 1; i >= 0; i--) {
                 byte m = (byte) (numeralArr2[j] * numeralArr1[i]);
-                if (m < 10) {
-                    columnArrJ[i + 1] += m;
-                } else {
-                    columnArrJ[i + 1] += m % 10;
-                    columnArrJ[i] += m / 10;
+                columnArrJ[i + 1] += m;
+            }
+            for (int i = columnArrJ.length - 1; i >= 1; i--) {
+                if (columnArrJ[i] >= 10) {
+                    columnArrJ[i - 1] += (byte) (columnArrJ[i] / 10);
+                    columnArrJ[i] = (byte) (columnArrJ[i] % 10);
                 }
             }
 
             for (int i = columnArrJ.length - 1; i >= 0; i--) {
-                int sumColumnArrPos = sumColumnArr.length - 1 -(columnArrJ.length - 1 - i) - sumColumnArrDelta;
+                int sumColumnArrPos = sumColumnArr.length - 1 - (columnArrJ.length - 1 - i) - sumColumnArrDelta;
                 byte s = (byte) (sumColumnArr[sumColumnArrPos] + columnArrJ[i]);
                 if (s < 10) {
                     sumColumnArr[sumColumnArrPos] = s;
@@ -42,13 +43,13 @@ public class ColumnMultiply implements MultiplyAlgorithm {
         StringBuilder sb = new StringBuilder();
 
         boolean firstIsZero = true;
-        for (int i = 0; i < numeralArr.length; i++) {
-            if (numeralArr[i] == 0) {
+        for (byte aNumeralArr : numeralArr) {
+            if (aNumeralArr == 0) {
                 if (!firstIsZero) {
-                    sb.append(numeralArr[i]);
+                    sb.append(aNumeralArr);
                 }
             } else {
-                sb.append(numeralArr[i]);
+                sb.append(aNumeralArr);
                 firstIsZero = false;
             }
         }

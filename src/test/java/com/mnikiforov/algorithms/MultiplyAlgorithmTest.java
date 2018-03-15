@@ -30,6 +30,7 @@ public class MultiplyAlgorithmTest {
     @Test
     public void multiplyTest() {
         assertEquals("4", multiplyAlgorithm.multiply("2", "2"));
+        assertEquals("60032", multiplyAlgorithm.multiply("896", "67"));
         assertEquals("121", multiplyAlgorithm.multiply("11", "11"));
         assertEquals("251460", multiplyAlgorithm.multiply("635", "396"));
         assertEquals("18415", multiplyAlgorithm.multiply("635", "29"));
