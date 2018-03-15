@@ -13,7 +13,7 @@ public class ColumnMultiply implements MultiplyAlgorithm {
 
             byte[] columnArrJ = new byte[numeralArr1.length + 1];
             for (int i = numeralArr1.length - 1; i >= 0; i--) {
-                byte m = (byte) (numeralArr2[i] * numeralArr1[j]);
+                byte m = (byte) (numeralArr2[j] * numeralArr1[i]);
                 if (m < 10) {
                     columnArrJ[i + 1] += m;
                 } else {
