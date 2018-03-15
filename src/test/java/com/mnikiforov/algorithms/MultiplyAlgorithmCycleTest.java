@@ -43,7 +43,7 @@ public class MultiplyAlgorithmCycleTest {
             }
 
             if (i % (ITERATION_COUNT / 100) == 0) {
-                System.out.println("Progress: " + i + " iterations");
+                System.out.println((Thread.currentThread().getName() + "; Progress: " + i + " iterations");
             }
         }
     }
