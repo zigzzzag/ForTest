@@ -1,4 +1,4 @@
-package com.mnikiforov.multithreading.blocking_queue;
+package com.mnikiforov.multithreading;
 
 public class VolatileTest {
 
