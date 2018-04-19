@@ -24,6 +24,12 @@ public class StringTest {
                 44));
 
         test2("12345678901234567890");
+
+        System.out.println("hashcodes");
+        System.out.println("empty string: " + "".hashCode());
+        for (int i = 0; i < 100; i++) {
+            System.out.println(i + ": " + Integer.toString(i).hashCode());
+        }
     }
 
     private static void test2(String sourceString) {
