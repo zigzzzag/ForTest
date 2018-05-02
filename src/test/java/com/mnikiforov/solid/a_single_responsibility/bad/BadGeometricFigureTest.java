@@ -1,4 +1,4 @@
-package com.mnikiforov.solid.single_responsibility.bad;
+package com.mnikiforov.solid.a_single_responsibility.bad;
 
 import org.junit.Test;
 

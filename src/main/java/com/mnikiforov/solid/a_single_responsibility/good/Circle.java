@@ -1,4 +1,4 @@
-package com.mnikiforov.solid.single_responsibility.good;
+package com.mnikiforov.solid.a_single_responsibility.good;
 
 public class Circle extends GoodFigure {
 
