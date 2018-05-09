@@ -1,5 +1,6 @@
 package com.mnikiforov.multithreading.lock;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.HashMap;
@@ -10,6 +11,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
+@Ignore
 public class ReadWriteLockTest {
 
     private final ExecutorService executor = Executors.newFixedThreadPool(8);

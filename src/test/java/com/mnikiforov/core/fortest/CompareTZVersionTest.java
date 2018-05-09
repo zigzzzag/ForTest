@@ -2,14 +2,13 @@ package com.mnikiforov.core.fortest;
 
 import com.mnikiforov.tzupdatertest.TimeZoneUpdater;
 import junit.framework.TestCase;
+import org.junit.Ignore;
 
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Created by zigzzzag on 24.08.2015.
- */
+@Ignore
 public class CompareTZVersionTest extends TestCase {
 
     private final List<String> TZ_VERSIONS = Arrays.asList(

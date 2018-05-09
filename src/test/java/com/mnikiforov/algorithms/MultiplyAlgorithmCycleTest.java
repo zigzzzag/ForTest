@@ -1,5 +1,6 @@
 package com.mnikiforov.algorithms;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.concurrent.ExecutorService;
@@ -8,6 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertEquals;
 
+@Ignore
 public class MultiplyAlgorithmCycleTest {
 
     private static final int ITERATION_COUNT = 10_000;
