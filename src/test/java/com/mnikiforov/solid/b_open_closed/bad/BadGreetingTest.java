@@ -1,4 +1,4 @@
-package com.mnikiforov.solid.open_closed.bad;
+package com.mnikiforov.solid.b_open_closed.bad;
 
 import org.junit.Test;
 

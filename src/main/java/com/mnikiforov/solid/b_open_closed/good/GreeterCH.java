@@ -1,4 +1,4 @@
-package com.mnikiforov.solid.open_closed.good;
+package com.mnikiforov.solid.b_open_closed.good;
 
 public class GreeterCH implements Greeter {
 
