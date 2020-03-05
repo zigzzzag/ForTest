@@ -1,6 +1,7 @@
 package com.mnikiforov.advanced_java.Golovach.collectiontest.treeset;
 
-import org.apache.commons.lang.StringUtils;
+
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.Set;
 import java.util.TreeSet;

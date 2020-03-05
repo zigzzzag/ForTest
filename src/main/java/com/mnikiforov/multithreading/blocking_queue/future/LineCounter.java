@@ -1,5 +1,7 @@
 package com.mnikiforov.multithreading.blocking_queue.future;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -9,7 +11,6 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 import java.util.concurrent.FutureTask;
-import org.apache.commons.lang.StringUtils;
 
 /**
  * Подсчитывает файлы, содержащие заданное ключевое слово, в каталоге и его подкаталогах

@@ -1,7 +1,7 @@
 package com.mnikiforov.core.datetest.early_dates_test;
 
-import org.apache.commons.lang.builder.ReflectionToStringBuilder;
-import org.apache.commons.lang.builder.StandardToStringStyle;
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+import org.apache.commons.lang3.builder.StandardToStringStyle;
 
 import java.io.Serializable;
 import java.util.Date;

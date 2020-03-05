@@ -1,6 +1,7 @@
 package com.mnikiforov.core.max_min;
 
-import org.apache.commons.lang.ObjectUtils;
+
+import org.apache.commons.lang3.ObjectUtils;
 
 import java.util.Calendar;
 import java.util.Date;

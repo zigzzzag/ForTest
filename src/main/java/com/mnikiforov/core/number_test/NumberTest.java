@@ -1,6 +1,6 @@
 package com.mnikiforov.core.number_test;
 
-import org.apache.commons.lang.math.NumberUtils;
+import org.apache.commons.lang3.math.NumberUtils;
 
 /**
  * Created by zigzzzag on 13.10.15.

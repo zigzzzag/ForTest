@@ -1,6 +1,8 @@
 package com.mnikiforov.javax.validation;
 
+import javax.validation.Valid;
 import javax.validation.constraints.*;
+import java.util.List;
 
 class User {
 
@@ -19,6 +21,9 @@ class User {
 
     @Email(message = "Email should be valid")
     private String email;
+
+    @Valid
+    private List<String> skills;
 
 
     public String getName() {
@@ -59,5 +64,13 @@ class User {
 
     void setEmail(String email) {
         this.email = email;
+    }
+
+    public List<String> getSkills() {
+        return skills;
+    }
+
+    public void setSkills(List<String> skills) {
+        this.skills = skills;
     }
 }

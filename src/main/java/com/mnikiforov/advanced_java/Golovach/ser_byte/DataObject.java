@@ -1,6 +1,6 @@
 package com.mnikiforov.advanced_java.Golovach.ser_byte;
 
-import org.apache.commons.lang.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
 
 import java.io.IOException;
 import java.io.Serializable;
